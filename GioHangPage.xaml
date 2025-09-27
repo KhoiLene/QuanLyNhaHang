@@ -1,26 +1,87 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:NhaHang.Converters"
              x:Class="NhaHang.GioHangPage"
              Title="Giỏ Hàng">
+            <ContentPage.Resources>
+    <ResourceDictionary>
+        <converters:NumberToCurrencyConverter x:Key="NumberToCurrencyConverter"/>
+    </ResourceDictionary>
+</ContentPage.Resources>
 
+    <Grid>
+        <Image 
+            Source="background.png" 
+            Aspect="AspectFill"
+            Opacity="1"/>
     <VerticalStackLayout Padding="20" Spacing="15">
 
+        <Grid>
+        <Frame Padding="8" BackgroundColor="#eeeeee" CornerRadius="8" HasShadow="False">
+            <HorizontalStackLayout Spacing="20">
+                <Label Text="Tên Món" 
+                    FontAttributes="Bold"
+                    FontSize="18" 
+                    TextColor="Black"
+                    WidthRequest="300"
+                    HorizontalOptions="Start" />
+
+                <Label Text="Giá (VNĐ)" 
+                    FontAttributes="Bold" 
+                    FontSize="18"
+                    TextColor="Black"
+                    WidthRequest="300"
+                    HorizontalOptions="Center" />
+
+                <Label Text="Số Lượng" 
+                    FontAttributes="Bold"
+                    FontSize="18"
+                    TextColor="Black" 
+                    WidthRequest="300"
+                    HorizontalOptions="Center" />
+
+                <Label Text="Thành Tiền (VNĐ)" 
+                    FontAttributes="Bold" 
+                    FontSize="18"
+                    TextColor="Black"
+                    WidthRequest="300"
+                    HorizontalOptions="Center" />
+
+                <Label Text="Lựa chọn" 
+                    FontAttributes="Bold" 
+                    FontSize="18"
+                    TextColor="BLACK"
+                    HorizontalOptions="EndAndExpand" />
+            </HorizontalStackLayout>
+        </Frame>
+    </Grid>
         <CollectionView x:Name="cartList">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <HorizontalStackLayout>
-                        <Label Text="{Binding Ten}" FontSize="18" WidthRequest="150" HorizontalOptions="Start" />
-                        <Label Text="{Binding Gia}" FontSize="18" WidthRequest="60" HorizontalOptions="Center" />
-                        <Label Text="{Binding SoLuong}" FontSize="18" WidthRequest="40" HorizontalOptions="Center" />
-                        <Label Text="{Binding ThanhTien}" FontSize="18" WidthRequest="80" HorizontalOptions="Center" />
+                        <Label Text="{Binding Ten}" FontSize="18" TextColor="Black" WidthRequest="330" HorizontalOptions="Start" />
+                        <Label Text="{Binding Gia, Converter ={StaticResource NumberToCurrencyConverter}}" FontSize="18" TextColor="Black" WidthRequest="340" HorizontalOptions="Center" />
+                        <Label Text="{Binding SoLuong}" FontSize="18" TextColor="Black" WidthRequest="300" HorizontalOptions="Center" />
+                        <Label Text="{Binding ThanhTien, Converter={StaticResource NumberToCurrencyConverter}}" FontSize="18" TextColor="Black" WidthRequest="300" HorizontalOptions="Center" />
+                        <Image Source="thungrac.png"
+                            WidthRequest="50"
+                            HeightRequest="50"
+                            Aspect="AspectFit"
+                            VerticalOptions="Center"
+                            HorizontalOptions="End">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnDeleteItemTapped" />
+                            </Image.GestureRecognizers>
+                        </Image>
                     </HorizontalStackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
 
-        <Label x:Name="totalLabel" FontAttributes="Bold" FontSize="20" TextColor="Red" HorizontalOptions="Start"/>
+        <Label x:Name="totalLabel" FontAttributes="Bold" FontSize="20" TextColor="BLACK" HorizontalOptions="End"/>
 
         <Button Text="Xóa giỏ hàng" Clicked="OnClearCartClicked"/>
 
     </VerticalStackLayout>
+    </Grid>
 </ContentPage>

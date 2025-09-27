@@ -305,3 +305,4 @@ d:\NhaHang\NhaHang\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Re
 d:\NhaHang\NhaHang\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\lau_tomyum.png
 d:\NhaHang\NhaHang\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\f\Birthstone-Regular.ttf
 d:\NhaHang\NhaHang\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\thungrac.png
+d:\NhaHang\NhaHang\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\NhaHang.sourcelink.json

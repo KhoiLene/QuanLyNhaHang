@@ -539,3 +539,4 @@ D:\NhaHang\NhaHang\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Birthstone-Reg
 D:\NhaHang\NhaHang\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\f\Birthstone-Regular.ttf
 D:\NhaHang\NhaHang\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\thungrac.scale-100.png
 D:\NhaHang\NhaHang\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\thungrac.scale-100.png
+D:\NhaHang\NhaHang\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\NhaHang.sourcelink.json

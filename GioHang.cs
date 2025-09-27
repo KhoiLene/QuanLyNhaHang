@@ -28,6 +28,13 @@ public class GioHang
             Items.Add(new GioHangItem { Ten = ten, Gia = gia, SoLuong = 1 });
         }
     }
+    public void RemoveItem(GioHangItem item)
+    {
+        if (Items.Contains(item))
+        {
+            Items.Remove(item);
+        }
+    }
     
     public void Clear()
     {
@@ -36,6 +43,6 @@ public class GioHang
 
     public int GetTotal()
     {
-        return Items.Sum(i => i.Gia);
+        return Items.Sum(i => i.Gia * i.SoLuong);
     }
 }

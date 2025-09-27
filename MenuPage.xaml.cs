@@ -11,7 +11,7 @@ public partial class MenuPage : ContentPage
 	private void OnLauNamTapped(object sender, TappedEventArgs e)
 	{
 		DisplayAlert("Chọn món", "Bạn đã chọn Lẩu nấm", "OK");
-		NhaHang.Services.GioHang.Instance.AddItem("Lẩu Nấm", 0);
+		NhaHang.Services.GioHang.Instance.AddItem("Lẩu Nấm", 20000);
 		lblCartCount.Text = GioHang.Instance.Dem.ToString();
 	}
 	private void OnLauNamPoint(object sender, PointerEventArgs e)
@@ -30,7 +30,7 @@ public partial class MenuPage : ContentPage
 	private void OnLauTomYumTapped(object sender, TappedEventArgs e)
 	{
 		DisplayAlert("Chọn món", "Bạn đã chọn Lẩu Tom Yum", "OK");
-		NhaHang.Services.GioHang.Instance.AddItem("Lẩu Tom Yum", 0);
+		NhaHang.Services.GioHang.Instance.AddItem("Lẩu Tom Yum", 10000);
 		lblCartCount.Text = GioHang.Instance.Dem.ToString();
 	}
 	private void OnLauTomYumPoint(object sender, PointerEventArgs e)

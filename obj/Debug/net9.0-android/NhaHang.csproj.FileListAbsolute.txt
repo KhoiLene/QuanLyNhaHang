@@ -1376,3 +1376,4 @@ d:\NhaHang\NhaHang\obj\Debug\net9.0-android\resizetizer\r\drawable\lau_xuyentieu
 d:\NhaHang\NhaHang\obj\Debug\net9.0-android\resizetizer\r\drawable\nuoclau.png
 d:\NhaHang\NhaHang\obj\Debug\net9.0-android\assets\Birthstone-Regular.ttf
 d:\NhaHang\NhaHang\obj\Debug\net9.0-android\resizetizer\r\drawable\thungrac.png
+d:\NhaHang\NhaHang\obj\Debug\net9.0-android\NhaHang.sourcelink.json
