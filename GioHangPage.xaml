@@ -1,0 +1,26 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NhaHang.GioHangPage"
+             Title="Giỏ Hàng">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+        <CollectionView x:Name="cartList">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <HorizontalStackLayout>
+                        <Label Text="{Binding Ten}" FontSize="18" WidthRequest="150" HorizontalOptions="Start" />
+                        <Label Text="{Binding Gia}" FontSize="18" WidthRequest="60" HorizontalOptions="Center" />
+                        <Label Text="{Binding SoLuong}" FontSize="18" WidthRequest="40" HorizontalOptions="Center" />
+                        <Label Text="{Binding ThanhTien}" FontSize="18" WidthRequest="80" HorizontalOptions="Center" />
+                    </HorizontalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Label x:Name="totalLabel" FontAttributes="Bold" FontSize="20" TextColor="Red" HorizontalOptions="Start"/>
+
+        <Button Text="Xóa giỏ hàng" Clicked="OnClearCartClicked"/>
+
+    </VerticalStackLayout>
+</ContentPage>

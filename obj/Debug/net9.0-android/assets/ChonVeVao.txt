@@ -1,0 +1,3 @@
+199000|Buffet Base
+299000|Buffet Pro
+349000|Buffet Pro Max

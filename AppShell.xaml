@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell
+    x:Class="NhaHang.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:NhaHang">
+
+    <TabBar>
+        <ShellContent Title="Trang chủ" ContentTemplate="{DataTemplate local:HomePage}" />
+        <!-- <ShellContent Title="Chọn vé vào" ContentTemplate="{DataTemplate local:VeVaoPage}" /> -->
+        <ShellContent Title="Menu Lẩu" ContentTemplate="{DataTemplate local:MenuPage}" />
+        <!-- <ShellContent Title="Chọn loại đồ ăn" ContentTemplate="{DataTemplate local:ChonLoaiDoAnPage}" /> -->
+        <!-- <ShellContent Title="Đặt bàn" ContentTemplate="{DataTemplate local:BookingPage}" />
+        <ShellContent Title="Khuyến mãi" ContentTemplate="{DataTemplate local:PromoPage}" />
+        <ShellContent Title="Thông tin" ContentTemplate="{DataTemplate local:InfoPage}" />  -->
+        <ShellContent Title="Giỏ Hàng" ContentTemplate="{DataTemplate local:GioHangPage}" />
+    </TabBar>
+
+<ShellContent
+        Title="Trang chủ"
+        ContentTemplate="{DataTemplate local:HomePage}" />
+
+</Shell>
+
