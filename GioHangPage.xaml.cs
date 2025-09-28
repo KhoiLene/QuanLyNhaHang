@@ -22,7 +22,65 @@ public partial class GioHangPage : ContentPage
         GioHang.Instance.Clear();
         LoadCart();
     }
+    private void OnDauTruTapped(object sender, EventArgs e)
+    {
+        var image = sender as Image;
+        var item = image?.BindingContext as GioHangItem;
+        if (item != null && item.SoLuong > 0)
+        {
+            item.SoLuong--;
+        }
+        if (item.SoLuong <= 0)
+        {
+            GioHang.Instance.RemoveItem(item); // ✅ Xóa khỏi giỏ
+        }
+        LoadCart();
 
+    }
+	private void OnDauTruPoint(object sender, PointerEventArgs e)
+	{
+		var image = sender as Image;
+		image.ScaleTo(1.1, 200); // phóng to 10% trong 200ms
+	}
+
+	private void OnDauTruPointer(object sender, PointerEventArgs e)
+	{
+		var image = sender as Image;
+		image.ScaleTo(1, 200); // trở về kích thước ban đầu
+	}
+    private void OnDauCongTapped(object sender, EventArgs e)
+    {
+        var image = sender as Image;
+        var item = image?.BindingContext as GioHangItem;
+        if (item != null && item.SoLuong > 0)
+        {
+            item.SoLuong++;
+        }
+        LoadCart();
+
+    }
+	private void OnDauCongPoint(object sender, PointerEventArgs e)
+	{
+		var image = sender as Image;
+		image.ScaleTo(1.1, 200); // phóng to 10% trong 200ms
+	}
+
+	private void OnDauCongPointer(object sender, PointerEventArgs e)
+	{
+		var image = sender as Image;
+		image.ScaleTo(1, 200); // trở về kích thước ban đầu
+	}
+    private void OnThungRacPoint(object sender, PointerEventArgs e)
+	{
+		var image = sender as Image;
+		image.ScaleTo(1.1, 200); // phóng to 10% trong 200ms
+	}
+
+	private void OnThungRacPointer(object sender, PointerEventArgs e)
+	{
+		var image = sender as Image;
+		image.ScaleTo(1, 200); // trở về kích thước ban đầu
+	}
     private void OnDeleteItemTapped(object sender, EventArgs e)
     {
         var image = sender as Image;                     // lấy Image vừa bấm

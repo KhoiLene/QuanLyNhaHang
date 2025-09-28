@@ -1,13 +1,19 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:converters="clr-namespace:NhaHang.Converters"
+             xmlns:local="clr-namespace:NhaHang.Con"
              x:Class="NhaHang.GioHangPage"
              Title="Giỏ Hàng">
             <ContentPage.Resources>
     <ResourceDictionary>
         <converters:NumberToCurrencyConverter x:Key="NumberToCurrencyConverter"/>
     </ResourceDictionary>
+    <ResourceDictionary>
+        <local:SoLuongNhoHonBangChinConverter x:Key="SoLuongCheck" />
+    </ResourceDictionary>
+
 </ContentPage.Resources>
+
 
     <Grid>
         <Image 
@@ -60,19 +66,71 @@
                 <DataTemplate>
                     <HorizontalStackLayout>
                         <Label Text="{Binding Ten}" FontSize="18" TextColor="Black" WidthRequest="330" HorizontalOptions="Start" />
-                        <Label Text="{Binding Gia, Converter ={StaticResource NumberToCurrencyConverter}}" FontSize="18" TextColor="Black" WidthRequest="340" HorizontalOptions="Center" />
-                        <Label Text="{Binding SoLuong}" FontSize="18" TextColor="Black" WidthRequest="300" HorizontalOptions="Center" />
+                        <Label Text="{Binding Gia, Converter ={StaticResource NumberToCurrencyConverter}}" FontSize="18" TextColor="Black" WidthRequest="330" HorizontalOptions="Center" />
+                        <Grid WidthRequest="310">
+                            <Frame TranslationY="-10" Padding="0" HasShadow="True" BorderColor="White" BackgroundColor="White" CornerRadius="10" HeightRequest="25" WidthRequest="120" TranslationX="-126">
+                                    <HorizontalStackLayout Spacing="10" VerticalOptions="Center" HorizontalOptions="Center">
+                                        <Image Source="dautru.png"
+                                            WidthRequest="15"
+                                            HeightRequest="15"
+                                            Aspect="AspectFit"
+                                            VerticalOptions="Center"
+                                            HorizontalOptions="Start"
+                                            TranslationY="0"
+                                            Grid.Column="0"
+                                            TranslationX="-5">
+                                            <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnDauTruTapped"/>
+                                        <PointerGestureRecognizer PointerEntered="OnDauTruPoint"
+                                                                PointerExited="OnDauTruPointer"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>
+                                        <Label Text="{Binding SoLuong}" FontAttributes="Bold" FontSize="20" TextColor="Black" WidthRequest="50" TranslationY="-3" TranslationX="14" >
+                                            <Label.Triggers>
+                                                <DataTrigger TargetType="Label"
+                                                            Binding="{Binding SoLuong, Converter={StaticResource SoLuongCheck}}"
+                                                            Value="True">
+                                                    <Setter Property="TranslationX" Value="20" />
+                                                </DataTrigger>
+                                            </Label.Triggers>
+                                        </Label>
+                                        <Image Source="daucong.png"
+                                            WidthRequest="15"
+                                            HeightRequest="15"
+                                            Aspect="AspectFit"
+                                            VerticalOptions="Center"
+                                            HorizontalOptions="Start"
+                                            TranslationY="-2"
+                                            Grid.Column="2"
+                                            TranslationX="2">
+                                            <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnDauCongTapped"/>
+                                        <PointerGestureRecognizer PointerEntered="OnDauCongPoint"
+                                                                PointerExited="OnDauCongPointer"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>
+                                    </HorizontalStackLayout>
+                            </Frame>
+                        </Grid>
                         <Label Text="{Binding ThanhTien, Converter={StaticResource NumberToCurrencyConverter}}" FontSize="18" TextColor="Black" WidthRequest="300" HorizontalOptions="Center" />
-                        <Image Source="thungrac.png"
-                            WidthRequest="50"
-                            HeightRequest="50"
-                            Aspect="AspectFit"
-                            VerticalOptions="Center"
-                            HorizontalOptions="End">
-                            <Image.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="OnDeleteItemTapped" />
-                            </Image.GestureRecognizers>
-                        </Image>
+                        <Grid WidthRequest="310">
+                        <Frame TranslationY="-20" Padding="0" HasShadow="True" BorderColor="White" BackgroundColor="White" CornerRadius="0" HeightRequest="47" WidthRequest="23" TranslationX="-100">
+                            <Image Source="thungrac.png"
+                                WidthRequest="60"
+                                HeightRequest="60"
+                                Aspect="AspectFit"
+                                VerticalOptions="Center"
+                                HorizontalOptions="End"
+                                TranslationY="5"
+                                TranslationX="-19">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnDeleteItemTapped" />
+                                    <PointerGestureRecognizer PointerEntered="OnThungRacPoint"
+                                                                PointerExited="OnThungRacPointer"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </Frame>
+                        </Grid>
                     </HorizontalStackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>

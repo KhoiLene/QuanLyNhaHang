@@ -312,3 +312,5 @@ d:\NhaHang\NhaHang\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources
 d:\NhaHang\NhaHang\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\f\Birthstone-Regular.ttf
 d:\NhaHang\NhaHang\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\thungrac.png
 d:\NhaHang\NhaHang\obj\Debug\net9.0-ios\iossimulator-x64\NhaHang.sourcelink.json
+d:\NhaHang\NhaHang\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\daucong.png
+d:\NhaHang\NhaHang\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\dautru.png

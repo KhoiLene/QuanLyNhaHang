@@ -540,3 +540,7 @@ D:\NhaHang\NhaHang\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\f\
 D:\NhaHang\NhaHang\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\thungrac.scale-100.png
 D:\NhaHang\NhaHang\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\thungrac.scale-100.png
 D:\NhaHang\NhaHang\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\NhaHang.sourcelink.json
+D:\NhaHang\NhaHang\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\daucong.scale-100.png
+D:\NhaHang\NhaHang\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\dautru.scale-100.png
+D:\NhaHang\NhaHang\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\daucong.scale-100.png
+D:\NhaHang\NhaHang\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\dautru.scale-100.png
