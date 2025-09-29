@@ -30,6 +30,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = NhaHang.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
+[D:/NhaHang/NhaHang/ChonMenuPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NhaHang.ChonMenuPage.xaml
+build_metadata.AdditionalFiles.TargetPath = ChonMenuPage.xaml
+build_metadata.AdditionalFiles.RelativePath = ChonMenuPage.xaml
+
 [D:/NhaHang/NhaHang/GioHangPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = NhaHang.GioHangPage.xaml

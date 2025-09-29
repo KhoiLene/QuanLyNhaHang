@@ -10,6 +10,6 @@ public partial class HomePage : ContentPage
 
     private void OnCounterClicked(object sender, EventArgs e)
     {
-        Application.Current.MainPage = new NavigationPage(new MenuPage());
+        Application.Current.MainPage = new NavigationPage(new ChonMenuPage());
     }
 }

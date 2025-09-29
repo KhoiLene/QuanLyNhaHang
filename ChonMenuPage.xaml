@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="NhaHang.ChonMenuPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <Grid>
+        <Image 
+            Source="background.png" 
+            Aspect="AspectFill"
+            Opacity="1" />
+        <Grid>
+                <Image Source="giohang.png"
+                    WidthRequest="100"
+                    HeightRequest="100"
+                    HorizontalOptions="End"
+                    VerticalOptions="Start" >
+                    <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnGioHangTapped"/>
+                    </Image.GestureRecognizers>
+                    </Image>
+                    <Frame Padding="0"
+                        HeightRequest="36"
+                        WidthRequest="36"
+                        CornerRadius="18"        
+                        BackgroundColor="Red"
+                        HasShadow="False"
+                        HorizontalOptions="End"
+                        VerticalOptions="Start"
+                        Margin="0,6,6,0">        
+                    <Label x:Name="lblCartCount"
+                        Text="0"
+                        FontSize="18"
+                        FontAttributes="Bold"
+                        TextColor="White"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"/>
+                    </Frame>
+            </Grid>
+        <AbsoluteLayout WidthRequest="800" HeightRequest="800">
+        <!-- Vòng tròn nền -->
+        <Frame WidthRequest="800" HeightRequest="800"
+            CornerRadius="800"
+            BorderColor="Red"
+            BackgroundColor="LightGray"
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All" />
+        <Image Source="lau.png"
+           WidthRequest="300" HeightRequest="300"
+           AbsoluteLayout.LayoutBounds="0.5,0.5,300,300"
+           AbsoluteLayout.LayoutFlags="PositionProportional" 
+           TranslationX="0"
+           TranslationY="3">
+           <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnLoGoTapped"/>
+                                <PointerGestureRecognizer PointerEntered="OnLoGoPoint"
+                                                        PointerExited="OnLoGoPointer"/>
+                            </Image.GestureRecognizers>
+        </Image>
+        <!-- Hình đặt ở góc trên -->
+        <Frame
+            WidthRequest="180" HeightRequest="180"
+            CornerRadius="180"
+            BackgroundColor="Red"
+            AbsoluteLayout.LayoutBounds="0.5,0.08,180,180"
+            AbsoluteLayout.LayoutFlags="PositionProportional">
+           <Grid>
+                <Image
+                    x:Name="imgThitNhapKhau"
+                    Source="thitnhapkhau.png"
+                    Aspect="AspectFit" >
+                    <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnLoGoTapped"/>
+                                <PointerGestureRecognizer PointerEntered="OnChonPoint"
+                                                        PointerExited="OnChonPointer"/>
+                            </Image.GestureRecognizers>
+                    </Image>
+                <Label
+                    x:Name="lblThitNhapKhau"
+                    Text="Thịt nhập khẩu"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    FontFamily="BirthstoneRegular"
+                    TextColor="white"
+                    FontAttributes="Bold"
+                    FontSize="Medium" >
+                    <Label.GestureRecognizers>
+        <TapGestureRecognizer Tapped="OnLoGoTapped" />
+        <PointerGestureRecognizer PointerEntered="OnChonPoint"
+                                  PointerExited="OnChonPointer" />
+        </Label.GestureRecognizers>
+
+                </Label>
+            </Grid>
+        </Frame>
+
+        <!-- Hình đặt bên phải trên -->
+        <Frame 
+            WidthRequest="180" HeightRequest="180"
+            CornerRadius="180"
+            BackgroundColor="Red"
+            AbsoluteLayout.LayoutBounds="0.8,0.2,180,180"
+            AbsoluteLayout.LayoutFlags="PositionProportional" >
+            <Grid>
+                <Image
+                    x:Name="imgHaiSan"
+                    Source="haisan.png"
+                    Aspect="AspectFit" >
+                    <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnLoGoTapped"/>
+                                <PointerGestureRecognizer PointerEntered="OnChonHaiSanPoint"
+                                                        PointerExited="OnChonHaiSanPointer"/>
+                            </Image.GestureRecognizers>
+                    </Image>
+                <Label
+                    x:Name="lblHaiSan"
+                    Text="Hải sản"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    FontFamily="BirthstoneRegular"
+                    TextColor="white"
+                    FontAttributes="Bold"
+                    FontSize="Medium" >
+                    <Label.GestureRecognizers>
+        <TapGestureRecognizer Tapped="OnLoGoTapped" />
+        <PointerGestureRecognizer PointerEntered="OnChonHaiSanPoint"
+                                  PointerExited="OnChonHaiSanPointer" />
+        </Label.GestureRecognizers>
+
+                </Label>
+            </Grid>
+        </Frame>
+        <!-- Hình góc phải dưới -->
+        <Frame
+            WidthRequest="180" HeightRequest="180"
+            CornerRadius="180"
+            BackgroundColor="Red"
+            AbsoluteLayout.LayoutBounds="0.8,0.8,180,180"
+            AbsoluteLayout.LayoutFlags="PositionProportional" >
+                <Grid>
+                    <Image
+                        x:Name="imgVienThaLau"
+                        Source="vienthalau.png"
+                        Aspect="AspectFit" >
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnLoGoTapped"/>
+                                <PointerGestureRecognizer PointerEntered="OnChonVienThaLauPoint"
+                                                        PointerExited="OnChonVienThaLauPointer"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    <Label
+                        x:Name="lblVienThaLau"
+                        Text="Viên thả lẩu"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontFamily="BirthstoneRegular"
+                        TextColor="white"
+                        FontAttributes="Bold"
+                        FontSize="Medium" >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnLoGoTapped" />
+                            <PointerGestureRecognizer PointerEntered="OnChonVienThaLauPoint"
+                                                    PointerExited="OnChonVienThaLauPointer"/>
+                            </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+        </Frame>
+         <!-- Hình góc phải -->
+        <Frame
+            WidthRequest="180" HeightRequest="180"
+            CornerRadius="180"
+            BackgroundColor="red"
+            AbsoluteLayout.LayoutBounds="0.92,0.5,180,180"
+            AbsoluteLayout.LayoutFlags="PositionProportional" >
+                <Grid>
+                    <Image
+                        x:Name="imgNamVaRau"
+                        Source="namvarau.png"
+                        Aspect="AspectFit" >
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnLoGoTapped"/>
+                                <PointerGestureRecognizer PointerEntered="OnChonNamVaRauPoint"
+                                                        PointerExited="OnChonNamVaRauPointer"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    <Label
+                        x:Name="lblNamVaRau"
+                        Text="Nấm và rau"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontFamily="BirthstoneRegular"
+                        TextColor="white"
+                        FontAttributes="Bold"
+                        FontSize="Medium" >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnLoGoTapped" />
+                            <PointerGestureRecognizer PointerEntered="OnChonNamVaRauPoint"
+                                                    PointerExited="OnChonNamVaRauPointer"/>
+                            </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+        </Frame>
+             <!-- Hình góc trái dưới -->
+        <Frame
+            WidthRequest="180" HeightRequest="180"
+            CornerRadius="180"
+            BackgroundColor="red"
+            AbsoluteLayout.LayoutBounds="0.2,0.8,180,180"
+            AbsoluteLayout.LayoutFlags="PositionProportional">
+                <Grid>
+                    <Image
+                        x:Name="imgNuocNgot"
+                        Source="nuocngot.png"
+                        Aspect="AspectFit" >
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnLoGoTapped"/>
+                                <PointerGestureRecognizer PointerEntered="OnChonNuocNgotPoint"
+                                                        PointerExited="OnChonNuocNgotPointer"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    <Label
+                        x:Name="lblNuocNgot"
+                        Text="Nước ngọt"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontFamily="BirthstoneRegular"
+                        TextColor="white"
+                        FontAttributes="Bold"
+                        FontSize="Medium" >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnLoGoTapped" />
+                            <PointerGestureRecognizer PointerEntered="OnChonNuocNgotPoint"
+                                                    PointerExited="OnChonNuocNgotPointer"/>
+                            </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+        </Frame>
+        
+
+        <!-- Hình đặt ở dưới -->
+        <Frame
+            WidthRequest="180" HeightRequest="180"
+            CornerRadius="180"
+            BackgroundColor="red"
+            AbsoluteLayout.LayoutBounds="0.5,0.92,180,180"
+            AbsoluteLayout.LayoutFlags="PositionProportional" >
+                <Grid>
+                    <Image
+                        x:Name="imgDoAnKem"
+                        Source="doankem.png"
+                        Aspect="AspectFit" >
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnLoGoTapped"/>
+                                <PointerGestureRecognizer PointerEntered="OnChonDoAnKemPoint"
+                                                        PointerExited="OnChonDoAnKemPointer"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    <Label
+                        x:Name="lblDoAnKem"
+                        Text="Đồ ăn kèm"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontFamily="BirthstoneRegular"
+                        TextColor="white"
+                        FontAttributes="Bold"
+                        FontSize="Medium" >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnLoGoTapped" />
+                            <PointerGestureRecognizer PointerEntered="OnChonDoAnKemPoint"
+                                                    PointerExited="OnChonDoAnKemPointer"/>
+                            </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+            </Frame>
+        <!-- Hinh góc trái trên -->
+        <Frame
+            WidthRequest="180" HeightRequest="180"
+            CornerRadius="180"
+            BackgroundColor="red"
+            AbsoluteLayout.LayoutBounds="0.2,0.2,180,180"
+            AbsoluteLayout.LayoutFlags="PositionProportional" >
+            <Grid>
+                    <Image
+                        x:Name="imgNuocTraiCay"
+                        Source="nuocep.png"
+                        Aspect="AspectFit" >
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnLoGoTapped"/>
+                                <PointerGestureRecognizer PointerEntered="OnChonNuocTraiCayPoint"
+                                                        PointerExited="OnChonNuocTraiCayPointer"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    <Label
+                        x:Name="lblNuocTraiCay"
+                        Text="Nước trái cây"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontFamily="BirthstoneRegular"
+                        TextColor="white"
+                        FontAttributes="Bold"
+                        FontSize="Medium" >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnLoGoTapped" />
+                            <PointerGestureRecognizer PointerEntered="OnChonNuocTraiCayPoint"
+                                                    PointerExited="OnChonNuocTraiCayPointer"/>
+                            </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+        </Frame>
+        
+       
+        <!-- Hình góc Trái -->
+        <Frame
+            WidthRequest="180" HeightRequest="180"
+            CornerRadius="180"
+            BackgroundColor="red"
+            AbsoluteLayout.LayoutBounds="0.08,0.5,180,180"
+            AbsoluteLayout.LayoutFlags="PositionProportional" >
+                <Grid>
+                    <Image
+                        x:Name="imgNuocEp"
+                        Source="nuocgao.png"
+                        Aspect="AspectFit" >
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnLoGoTapped"/>
+                                <PointerGestureRecognizer PointerEntered="OnChonNuocEpPoint"
+                                                        PointerExited="OnChonNuocEpPointer"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    <Label
+                        x:Name="lblNuocEp"
+                        Text="Nước ép"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontFamily="BirthstoneRegular"
+                        TextColor="white"
+                        FontAttributes="Bold"
+                        FontSize="Medium" >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnLoGoTapped" />
+                            <PointerGestureRecognizer PointerEntered="OnChonNuocEpPoint"
+                                                    PointerExited="OnChonNuocEpPointer"/>
+                            </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+        </Frame>
+    </AbsoluteLayout>
+    </Grid>
+</ContentPage>

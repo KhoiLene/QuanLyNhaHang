@@ -22,6 +22,7 @@ public class SoLuongNhoHonBangMotConverter : IValueConverter
 
 public class GioHangItem : INotifyPropertyChanged
 {
+    public int Dem { get; set; }
     public string Ten { get; set; }
     public int Gia { get; set; }
     public int ThanhTien => Gia * SoLuong;
@@ -49,22 +50,23 @@ public class GioHangItem : INotifyPropertyChanged
 
 public class GioHang
 {
+    
     private static GioHang _instance;
     public static GioHang Instance => _instance ??= new GioHang();
 
     public ObservableCollection<GioHangItem> Items { get; } = new();
     public int Dem => Items.Sum(i => i.SoLuong);
 
-    public void AddItem(string ten, int gia)
+    public void AddItem(string ten, int gia, int soLuong = 0)
     {
         var existing = Items.FirstOrDefault(i => i.Ten == ten);
         if (existing != null)
         {
-            existing.SoLuong++;
+            existing.SoLuong += soLuong; 
         }
         else
         {
-            Items.Add(new GioHangItem { Ten = ten, Gia = gia, SoLuong = 1 });
+            Items.Add(new GioHangItem { Ten = ten, Gia = gia, SoLuong = soLuong });
         }
     }
     public void RemoveItem(GioHangItem item)
@@ -74,7 +76,6 @@ public class GioHang
             Items.Remove(item);
         }
     }
-
     public void Clear()
     {
         Items.Clear();
