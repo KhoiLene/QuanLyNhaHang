@@ -69,7 +69,7 @@
                     Source="thitnhapkhau.png"
                     Aspect="AspectFit" >
                     <Image.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="OnLoGoTapped"/>
+                                <TapGestureRecognizer Tapped="OnMenuThitTapped"/>
                                 <PointerGestureRecognizer PointerEntered="OnChonPoint"
                                                         PointerExited="OnChonPointer"/>
                             </Image.GestureRecognizers>
@@ -84,7 +84,7 @@
                     FontAttributes="Bold"
                     FontSize="Medium" >
                     <Label.GestureRecognizers>
-        <TapGestureRecognizer Tapped="OnLoGoTapped" />
+        <TapGestureRecognizer Tapped="OnMenuThitTapped" />
         <PointerGestureRecognizer PointerEntered="OnChonPoint"
                                   PointerExited="OnChonPointer" />
         </Label.GestureRecognizers>

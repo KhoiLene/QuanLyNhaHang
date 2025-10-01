@@ -1,4 +1,6 @@
 namespace NhaHang;
+
+using System.Threading.Tasks;
 using NhaHang.Services;
 public partial class ChonMenuPage : ContentPage
 {
@@ -21,6 +23,10 @@ public partial class ChonMenuPage : ContentPage
     {
         var image = sender as Image;
         image.ScaleTo(1, 200); // trở về kích thước ban đầu
+    }
+    private async void OnMenuThitTapped(object sender, TappedEventArgs e)
+    {
+        await Navigation.PushAsync(new MenuThitPage());
     }
     private async void OnChonPoint(object sender, PointerEventArgs e)
     {

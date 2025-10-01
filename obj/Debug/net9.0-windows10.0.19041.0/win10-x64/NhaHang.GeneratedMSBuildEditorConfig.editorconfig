@@ -58,11 +58,23 @@ build_metadata.AdditionalFiles.ManifestResourceName = NhaHang.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
+[D:/NhaHang/NhaHang/MenuHaiSan.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NhaHang.MenuHaiSan.xaml
+build_metadata.AdditionalFiles.TargetPath = MenuHaiSan.xaml
+build_metadata.AdditionalFiles.RelativePath = MenuHaiSan.xaml
+
 [D:/NhaHang/NhaHang/MenuPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = NhaHang.MenuPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MenuPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MenuPage.xaml
+
+[D:/NhaHang/NhaHang/MenuThit.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NhaHang.MenuThit.xaml
+build_metadata.AdditionalFiles.TargetPath = MenuThit.xaml
+build_metadata.AdditionalFiles.RelativePath = MenuThit.xaml
 
 [D:/NhaHang/NhaHang/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
