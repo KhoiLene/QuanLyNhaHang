@@ -20,8 +20,31 @@
             Source="background.png" 
             Aspect="AspectFill"
             Opacity="1"/>
+    <ScrollView>
     <VerticalStackLayout Padding="20" Spacing="15">
-
+         <Frame CornerRadius="12" Padding="15" HasShadow="True" BackgroundColor="White">
+                <VerticalStackLayout>
+            <Button
+            x:Name="NhapKhach"
+            Text="Nhập Lại"
+            Clicked="OnNhapClicked"
+            WidthRequest="105"
+            HeightRequest="50"
+            HorizontalOptions="End"
+            VerticalOptions="Start"
+            FontSize="18"
+            CornerRadius="20"/>
+                    <Label Text="Thông tin khách hàng" FontAttributes="Bold" FontSize="18" TextColor="Black"/>
+                    <Label x:Name="lblTen" FontAttributes="Bold" FontSize="18" TextColor="Black"/>
+                    <Label x:Name="lblNgaySinh" FontAttributes="Bold" FontSize="18" TextColor="Black"/>
+                    <Label x:Name="lblSDT" FontAttributes="Bold" FontSize="18" TextColor="Black"/>
+                    <Label x:Name="lblSoBan" FontAttributes="Bold" FontSize="18" TextColor="Black"/>
+                    <Label Text="Mã hóa đơn" FontAttributes="Bold" FontSize="18" TextColor="Black"/>
+                    <Label x:Name="lblMaHoaDon" FontSize="18" TextColor="Black"/>
+                    <Label Text="Ngày xuất hoá đơn" FontAttributes="Bold" FontSize="18" TextColor="Black"/>
+                    <Label x:Name="lblNgayXuat" FontSize="18" TextColor="Black"/>
+                </VerticalStackLayout>
+            </Frame>
         <Grid>
         <Frame Padding="8" BackgroundColor="#eeeeee" CornerRadius="8" HasShadow="False">
             <HorizontalStackLayout Spacing="20">
@@ -136,10 +159,24 @@
             </CollectionView.ItemTemplate>
         </CollectionView>
 
-        <Label x:Name="totalLabel" FontAttributes="Bold" FontSize="20" TextColor="BLACK" HorizontalOptions="End"/>
+        <Label x:Name="totalLabel" FontAttributes="Bold" FontSize="20" TextColor="BLACK" HorizontalOptions="Fill"/>
 
-        <Button Text="Xóa giỏ hàng" Clicked="OnClearCartClicked"/>
-
+        <Button Text="Xóa giỏ hàng" FontSize="18" CornerRadius="20" Clicked="OnClearCartClicked"/>
+         <Button
+            x:Name="Chonmon"
+            Text="Chọn món ăn tiếp theo"
+            Clicked="OnChonClicked"
+            HorizontalOptions="Fill"
+            FontSize="18"
+            CornerRadius="20"/>
+        <Button
+            x:Name="Hoadon"
+            Text="Thanh Toán"
+            Clicked="OnThanhToanClicked"
+            HorizontalOptions="Fill"
+            FontSize="18"
+            CornerRadius="20"/>
     </VerticalStackLayout>
+    </ScrollView>
     </Grid>
 </ContentPage>

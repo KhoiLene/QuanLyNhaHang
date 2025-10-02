@@ -28,6 +28,10 @@ public partial class ChonMenuPage : ContentPage
     {
         await Navigation.PushAsync(new MenuThitPage());
     }
+    private async void OnMenuHaiSanTapped(object sender, TappedEventArgs e)
+    {
+        await Navigation.PushAsync(new MenuHaiSanPage());
+    }
     private async void OnChonPoint(object sender, PointerEventArgs e)
     {
         await imgThitNhapKhau.ScaleTo(1.1, 200);

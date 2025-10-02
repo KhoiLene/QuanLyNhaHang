@@ -19,6 +19,7 @@
             Source="background.png" 
             Aspect="AspectFill"
             Opacity="1"/>
+<ScrollView>
         <VerticalStackLayout  Padding="10" Spacing="20">
             <Grid>
                 <Image Source="giohang.png"
@@ -336,5 +337,6 @@
 
             </Grid>
         </VerticalStackLayout>
-    </Grid>
+    </ScrollView>
+</Grid>
 </ContentPage>

@@ -22,7 +22,7 @@
                     Aspect="AspectFit"/>
             <Button
             x:Name="CounterBtn"
-            Text="BẮT ĐẦU"
+            Text="BẮT ĐẦU CA LÀM"
             Clicked="OnCounterClicked"
             HorizontalOptions="Fill"
             FontSize="18"

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="NhaHang.ThanhToanPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <Grid>
+        <Image 
+            Source="background.png" 
+            Aspect="AspectFill"
+            Opacity="1"/>
+     <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+            <Label Text="Quét QR để thanh toán" 
+                   FontSize="20" 
+                   HorizontalOptions="Center" />
+            <Image x:Name="qrImage" 
+                   WidthRequest="300" 
+                   HeightRequest="300" />
+            <Label x:Name="lblThongTin" 
+                   FontSize="16"
+                   HorizontalOptions="Center"/>
+        <Grid ColumnDefinitions="*,*"
+                RowDefinitions="auto,auto"
+                ColumnSpacing="0"
+                RowSpacing="30">
+            <Grid  Grid.Row="0" Grid.Column="0">
+                <Button
+            x:Name="Xong"
+            Text="Xong"
+            Clicked="OnThanhToanClicked"
+            HorizontalOptions="Start"
+            FontSize="18"
+            CornerRadius="20"/>
+                </Grid>
+            <Grid  Grid.Row="0" Grid.Column="1">
+                <Button
+            x:Name="Huy"
+            Text="Huỷ"
+            Clicked="OnHuyThanhToanClicked"
+            HorizontalOptions="End"
+            FontSize="18"
+            CornerRadius="20"/>
+                </Grid>
+        </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+    </Grid>
+</ContentPage>

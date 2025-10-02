@@ -5,7 +5,8 @@
     xmlns:converters="clr-namespace:NhaHang.Converters"
              xmlns:local="clr-namespace:NhaHang.Con"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-            <ContentPage.Resources>
+        
+    <ContentPage.Resources>
     <ResourceDictionary>
         <converters:NumberToCurrencyConverter x:Key="NumberToCurrencyConverter"/>
     </ResourceDictionary>
@@ -14,11 +15,14 @@
     </ResourceDictionary>
 
 </ContentPage.Resources>
-    <Grid>
-        <Image 
+<Grid>
+     <Image 
             Source="background.png" 
             Aspect="AspectFill"
             Opacity="1"/>
+
+ <ScrollView>
+    <Grid>
         <VerticalStackLayout  Padding="10" Spacing="20">
             <Grid>
                 <Image Source="giohang.png"
@@ -58,11 +62,11 @@
             <Grid  Grid.Row="0" Grid.Column="0">
                 <Frame Padding="0" HasShadow="True" BorderColor="White" BackgroundColor="White" CornerRadius="10" HeightRequest="290" WidthRequest="255">
                     <Grid>
-                        <Image x:Name="imgLauNam" Source="lau_nam.png" Aspect="AspectFit" HeightRequest="240" WidthRequest="230" HorizontalOptions="Center" VerticalOptions="Start">
+                        <Image x:Name="imgLoiVaiBo" Source="loivaibo.png" Aspect="AspectFit" HeightRequest="240" WidthRequest="230" HorizontalOptions="Center" VerticalOptions="Start">
                             <Image.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="OnLauNamTapped"/>
-                                <PointerGestureRecognizer PointerEntered="OnLauNamPoint"
-                                                        PointerExited="OnLauNamPointer"/>
+                                <TapGestureRecognizer Tapped="OnLoiVaiBoTapped"/>
+                                <PointerGestureRecognizer PointerEntered="OnLoiVaiBoPoint"
+                                                        PointerExited="OnLoiVaiBoPointer"/>
                             </Image.GestureRecognizers>
                         </Image>
                         <Frame TranslationY="110" Padding="0" HasShadow="True" BorderColor="White" BackgroundColor="White" CornerRadius="10" HeightRequest="50" WidthRequest="250" TranslationX="0">
@@ -83,11 +87,11 @@
                                             </Image.GestureRecognizers>
                                         </Image>
                                         <Label 
-                                            x:Name="lblLauNam" Text="Lẩu Nấm" WidthRequest="150" TranslationX="25" FontFamily="BirthstoneRegular" FontAttributes="Bold" FontSize="30" TextColor="Black" HorizontalOptions="Center" VerticalOptions="End" Padding="5,2">
+                                            x:Name="lblLoiVaiBo" Text="Lõi Vai Bò" WidthRequest="150" TranslationX="25" FontFamily="BirthstoneRegular" FontAttributes="Bold" FontSize="30" TextColor="Black" HorizontalOptions="Center" VerticalOptions="End" Padding="5,2">
                                             <Label.GestureRecognizers>
-                                                <TapGestureRecognizer Tapped="OnLauNamTapped"/>
-                                                <PointerGestureRecognizer PointerEntered="OnLauNamPoint"
-                                                                        PointerExited="OnLauNamPointer"/>
+                                                <TapGestureRecognizer Tapped="OnLoiVaiBoTapped"/>
+                                                <PointerGestureRecognizer PointerEntered="OnLoiVaiBoPoint"
+                                                                        PointerExited="OnLoiVaiBoPointer"/>
                                             </Label.GestureRecognizers>
                                         </Label>
                                         <Image Source="daucong.png"
@@ -113,11 +117,11 @@
             <Grid  Grid.Row="0" Grid.Column="1">
                 <Frame Padding="0" HasShadow="True" BorderColor="White" BackgroundColor="White" CornerRadius="10" HeightRequest="290" WidthRequest="255">
                     <Grid>
-                        <Image x:Name="imgLauNam1" Source="lau_nam.png" Aspect="AspectFit" HeightRequest="240" WidthRequest="230" HorizontalOptions="Center" VerticalOptions="Start">
+                        <Image x:Name="imgBaChiBo" Source="bachibo.png" Aspect="AspectFit" HeightRequest="240" WidthRequest="230" HorizontalOptions="Center" VerticalOptions="Start">
                             <Image.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="OnLauNamXTapped"/>
-                                <PointerGestureRecognizer PointerEntered="OnLauNamXPoint"
-                                                        PointerExited="OnLauNamXPointer"/>
+                                <TapGestureRecognizer Tapped="OnBaChiBoTapped"/>
+                                <PointerGestureRecognizer PointerEntered="OnBaChiBoPoint"
+                                                        PointerExited="OnBaChiBoPointer"/>
                             </Image.GestureRecognizers>
                         </Image>
                         <Frame TranslationY="110" Padding="0" HasShadow="True" BorderColor="White" BackgroundColor="White" CornerRadius="10" HeightRequest="50" WidthRequest="250" TranslationX="0">
@@ -138,11 +142,11 @@
                                             </Image.GestureRecognizers>
                                         </Image>
                                         <Label 
-                                            x:Name="lblLauNam1" Text="Lẩu Nấm" WidthRequest="150" TranslationX="25" FontFamily="BirthstoneRegular" FontAttributes="Bold" FontSize="30" TextColor="Black" HorizontalOptions="Center" VerticalOptions="End" Padding="5,2">
+                                            x:Name="lblBaChiBo" Text="Ba chỉ bò" WidthRequest="150" TranslationX="20" FontFamily="BirthstoneRegular" FontAttributes="Bold" FontSize="30" TextColor="Black" HorizontalOptions="Center" VerticalOptions="End" Padding="5,2">
                                             <Label.GestureRecognizers>
-                                                <TapGestureRecognizer Tapped="OnLauNamXTapped"/>
-                                                <PointerGestureRecognizer PointerEntered="OnLauNamXPoint"
-                                                                        PointerExited="OnLauNamXPointer"/>
+                                                <TapGestureRecognizer Tapped="OnBaChiBoTapped"/>
+                                                <PointerGestureRecognizer PointerEntered="OnBaChiBoPoint"
+                                                                        PointerExited="OnBaChiBoPointer"/>
                                             </Label.GestureRecognizers>
                                         </Label>
                                         <Image Source="daucong.png"
@@ -168,11 +172,11 @@
              <Grid  Grid.Row="0" Grid.Column="2">
                 <Frame Padding="0" HasShadow="True" BorderColor="White" BackgroundColor="White" CornerRadius="10" HeightRequest="290" WidthRequest="255">
                     <Grid >
-                        <Image x:Name="imgLauTomYum" Source="lau_tomyum.png" Aspect="AspectFit" HeightRequest="240" WidthRequest="230" HorizontalOptions="Center" VerticalOptions="Start">
+                        <Image x:Name="imgBapBoUc" Source="bapbouc.png" Aspect="AspectFit" HeightRequest="240" WidthRequest="230" HorizontalOptions="Center" VerticalOptions="Start">
                         <Image.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="OnLauTomYumTapped"/>
-                                <PointerGestureRecognizer PointerEntered="OnLauTomYumPoint"
-                                                        PointerExited="OnLauTomYumPointer"/>
+                                <TapGestureRecognizer Tapped="OnBapBoUcTapped"/>
+                                <PointerGestureRecognizer PointerEntered="OnBapBoUcPoint"
+                                                        PointerExited="OnBapBoUcPointer"/>
                             </Image.GestureRecognizers>
                         </Image>
                         <Frame TranslationY="110" Padding="0" HasShadow="True" BorderColor="White" BackgroundColor="White" CornerRadius="10" HeightRequest="50" WidthRequest="290" TranslationX="0">
@@ -192,11 +196,11 @@
                                                                 PointerExited="OnDauTruDemPointer"/>
                                             </Image.GestureRecognizers>
                                         </Image>
-                                             <Label x:Name="lblLauTomYum" Text="Lẩu Tom Yum" WidthRequest="175" TranslationX="15" FontFamily="BirthstoneRegular" FontAttributes="Bold" FontSize="30" TextColor="Black" HorizontalOptions="Center" VerticalOptions="End" Padding="5,2">
+                                             <Label x:Name="lblBapBoUc" Text="Bắp bò Úc" WidthRequest="175" TranslationX="25" FontFamily="BirthstoneRegular" FontAttributes="Bold" FontSize="30" TextColor="Black" HorizontalOptions="Center" VerticalOptions="End" Padding="5,2">
                                                 <Label.GestureRecognizers>
-                                                    <TapGestureRecognizer Tapped="OnLauTomYumTapped"/>
-                                                    <PointerGestureRecognizer PointerEntered="OnLauTomYumPoint"
-                                                                            PointerExited="OnLauTomYumPointer"/>
+                                                    <TapGestureRecognizer Tapped="OnBapBoUcTapped"/>
+                                                    <PointerGestureRecognizer PointerEntered="OnBapBoUcPoint"
+                                                                            PointerExited="OnBapBoUcPointer"/>
                                                 </Label.GestureRecognizers>
                                             </Label>
                                         <Image Source="daucong.png"
@@ -220,14 +224,14 @@
                 </Frame>
              </Grid>
 
-            <Grid  Grid.Row="0" Grid.Column="4">
+            <Grid  Grid.Row="0" Grid.Column="3">
                 <Frame Padding="0" HasShadow="True" BorderColor="White" BackgroundColor="White" CornerRadius="10" HeightRequest="290" WidthRequest="255">
                     <Grid >
-                        <Image x:Name="imgLauXuyenTieu" Source="lau_xuyentieu.png" Aspect="AspectFit" HeightRequest="240" WidthRequest="230" HorizontalOptions="Center" VerticalOptions="Start">
+                        <Image x:Name="imgGauBo" Source="gaubo.png" Aspect="AspectFit" HeightRequest="240" WidthRequest="230" HorizontalOptions="Center" VerticalOptions="Start">
                         <Image.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="OnLauXuyenTieuTapped"/>
-                                <PointerGestureRecognizer PointerEntered="OnLauXuyenTieuPoint"
-                                                        PointerExited="OnLauXuyenTieuPointer"/>
+                                <TapGestureRecognizer Tapped="OnGauBoTapped"/>
+                                <PointerGestureRecognizer PointerEntered="OnGauBoPoint"
+                                                        PointerExited="OnGauBoPointer"/>
                             </Image.GestureRecognizers>
                         </Image>
                         <Frame TranslationY="110" Padding="0" HasShadow="True" BorderColor="White" BackgroundColor="White" CornerRadius="10" HeightRequest="50" WidthRequest="290" TranslationX="0">
@@ -248,11 +252,11 @@
                                             </Image.GestureRecognizers>
                                         </Image>
                                         <Label 
-                                            x:Name="lblLauXuyenTieu" Text="Lẩu Xuyên Tiêu" WidthRequest="175" TranslationX="0" FontFamily="BirthstoneRegular" FontAttributes="Bold" FontSize="30" TextColor="Black" HorizontalOptions="Center" VerticalOptions="End" Padding="5,2">
+                                            x:Name="lblGauBo" Text="Gầu bò" WidthRequest="175" TranslationX="39" FontFamily="BirthstoneRegular" FontAttributes="Bold" FontSize="30" TextColor="Black" HorizontalOptions="Center" VerticalOptions="End" Padding="5,2">
                                             <Label.GestureRecognizers>
-                                                <TapGestureRecognizer Tapped="OnLauXuyenTieuTapped"/>
-                                                <PointerGestureRecognizer PointerEntered="OnLauXuyenTieuPoint"
-                                                                        PointerExited="OnLauXuyenTieuPointer"/>
+                                                <TapGestureRecognizer Tapped="OnGauBoTapped"/>
+                                                <PointerGestureRecognizer PointerEntered="OnGauBoPoint"
+                                                                        PointerExited="OnGauBoPointer"/>
                                             </Label.GestureRecognizers>
                                         </Label>
                                         <Image Source="daucong.png"
@@ -276,15 +280,70 @@
                 </Frame>
              </Grid>
 
+            <Grid  Grid.Row="1" Grid.Column="0">
+                <Frame Padding="0" HasShadow="True" BorderColor="White" BackgroundColor="White" CornerRadius="10" HeightRequest="290" WidthRequest="255">
+                    <Grid >
+                        <Image x:Name="imgNacDamHeo" Source="nacdamheo.png" Aspect="AspectFit" HeightRequest="240" WidthRequest="230" HorizontalOptions="Center" VerticalOptions="Start">
+                        <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnNacDamHeoTapped"/>
+                                <PointerGestureRecognizer PointerEntered="OnNacDamHeoPoint"
+                                                        PointerExited="OnNacDamHeoPointer"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Frame TranslationY="110" Padding="0" HasShadow="True" BorderColor="White" BackgroundColor="White" CornerRadius="10" HeightRequest="50" WidthRequest="290" TranslationX="0">
+                                    <HorizontalStackLayout Spacing="10" VerticalOptions="Center" HorizontalOptions="Center">
+                                        <Image Source="dautru.png"
+                                            WidthRequest="20"
+                                            HeightRequest="20"
+                                            Aspect="AspectFit"
+                                            VerticalOptions="Center"
+                                            HorizontalOptions="Start"
+                                            TranslationY="0"
+                                            Grid.Column="0"
+                                            TranslationX="-5">
+                                            <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnDauTruDem2Tapped"/>
+                                        <PointerGestureRecognizer PointerEntered="OnDauTruDemPoint"
+                                                                PointerExited="OnDauTruDemPointer"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>
+                                        <Label 
+                                            x:Name="lblNacDamHeo" Text="Nạc dăm heo" WidthRequest="175" TranslationX="17" FontFamily="BirthstoneRegular" FontAttributes="Bold" FontSize="30" TextColor="Black" HorizontalOptions="Center" VerticalOptions="End" Padding="5,2">
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="OnNacDamHeoTapped"/>
+                                                <PointerGestureRecognizer PointerEntered="OnNacDamHeoPoint"
+                                                                        PointerExited="OnNacDamHeoPointer"/>
+                                            </Label.GestureRecognizers>
+                                        </Label>
+                                        <Image Source="daucong.png"
+                                            WidthRequest="20"
+                                            HeightRequest="20"
+                                            Aspect="AspectFit"
+                                            VerticalOptions="Center"
+                                            HorizontalOptions="Start"
+                                            TranslationY="-2"
+                                            Grid.Column="2"
+                                            TranslationX="4">
+                                            <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnDauCongDem2Tapped"/>
+                                        <PointerGestureRecognizer PointerEntered="OnDauCongDemPoint"
+                                                                PointerExited="OnDauCongDemPointer"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>
+                                    </HorizontalStackLayout>
+                            </Frame>
+                    </Grid>
+                </Frame>
+             </Grid>
                 <!-- Hàng 2 -->
             <Grid  Grid.Row="1" Grid.Column="1">
                 <Frame Padding="0" HasShadow="True" BorderColor="White" BackgroundColor="White" CornerRadius="10" HeightRequest="290" WidthRequest="255">
                     <Grid >
-                        <Image x:Name="imgLauCuaDong" Source="lau_cuadong.png" Aspect="AspectFit" HeightRequest="240" WidthRequest="230" HorizontalOptions="Center" VerticalOptions="Start">
+                        <Image x:Name="imgSuonHeo" Source="suonheo.png" Aspect="AspectFit" HeightRequest="240" WidthRequest="230" HorizontalOptions="Center" VerticalOptions="Start">
                         <Image.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="OnLauCuaDongTapped"/>
-                                <PointerGestureRecognizer PointerEntered="OnLauCuaDongPoint"
-                                                        PointerExited="OnLauCuaDongPointer"/>
+                                <TapGestureRecognizer Tapped="OnSuonHeoTapped"/>
+                                <PointerGestureRecognizer PointerEntered="OnSuonHeoPoint"
+                                                        PointerExited="OnSuonHeoPointer"/>
                             </Image.GestureRecognizers>
                         </Image>
                         <Frame TranslationY="110" Padding="0" HasShadow="True" BorderColor="White" BackgroundColor="White" CornerRadius="10" HeightRequest="50" WidthRequest="290" TranslationX="0">
@@ -304,11 +363,11 @@
                                                                 PointerExited="OnDauTruDemPointer"/>
                                             </Image.GestureRecognizers>
                                         </Image>
-                                        <Label x:Name="lblLauCuaDong" Text="Lẩu Cua Đồng" WidthRequest="175" TranslationX="7" FontFamily="BirthstoneRegular" FontAttributes="Bold" FontSize="30" TextColor="Black" HorizontalOptions="Center" VerticalOptions="End" Padding="5,2">
+                                        <Label x:Name="lblSuonHeo" Text="Sườn heo" WidthRequest="175" TranslationX="36" FontFamily="BirthstoneRegular" FontAttributes="Bold" FontSize="30" TextColor="Black" HorizontalOptions="Center" VerticalOptions="End" Padding="5,2">
                                             <Label.GestureRecognizers>
-                                                <TapGestureRecognizer Tapped="OnLauCuaDongTapped"/>
-                                                <PointerGestureRecognizer PointerEntered="OnLauCuaDongPoint"
-                                                                        PointerExited="OnLauCuaDongPointer"/>
+                                                <TapGestureRecognizer Tapped="OnSuonHeoTapped"/>
+                                                <PointerGestureRecognizer PointerEntered="OnSuonHeoPoint"
+                                                                        PointerExited="OnSuonHeoPointer"/>
                                             </Label.GestureRecognizers>
                                         </Label>
                                        
@@ -332,15 +391,70 @@
                     </Grid>
                 </Frame>
             </Grid>
+            <Grid  Grid.Row="1" Grid.Column="2">
+                <Frame Padding="0" HasShadow="True" BorderColor="White" BackgroundColor="White" CornerRadius="10" HeightRequest="290" WidthRequest="255">
+                    <Grid >
+                        <Image x:Name="imgTimHeo" Source="timheo.png" Aspect="AspectFit" HeightRequest="240" WidthRequest="230" HorizontalOptions="Center" VerticalOptions="Start">
+                        <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnTimHeoTapped"/>
+                                <PointerGestureRecognizer PointerEntered="OnTimHeoPoint"
+                                                        PointerExited="OnTimHeoPointer"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Frame TranslationY="110" Padding="0" HasShadow="True" BorderColor="White" BackgroundColor="White" CornerRadius="10" HeightRequest="50" WidthRequest="290" TranslationX="0">
+                                    <HorizontalStackLayout Spacing="10" VerticalOptions="Center" HorizontalOptions="Center">
+                                        <Image Source="dautru.png"
+                                            WidthRequest="20"
+                                            HeightRequest="20"
+                                            Aspect="AspectFit"
+                                            VerticalOptions="Center"
+                                            HorizontalOptions="Start"
+                                            TranslationY="0"
+                                            Grid.Column="0"
+                                            TranslationX="-5">
+                                            <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnDauTruDem3Tapped"/>
+                                        <PointerGestureRecognizer PointerEntered="OnDauTruDemPoint"
+                                                                PointerExited="OnDauTruDemPointer"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>
+                                        <Label 
+                                            x:Name="lblTimHeo" Text="Tim heo" WidthRequest="175" TranslationX="39" FontFamily="BirthstoneRegular" FontAttributes="Bold" FontSize="30" TextColor="Black" HorizontalOptions="Center" VerticalOptions="End" Padding="5,2">
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="OnTimHeoTapped"/>
+                                                <PointerGestureRecognizer PointerEntered="OnTimHeoPoint"
+                                                                        PointerExited="OnTimHeoPointer"/>
+                                            </Label.GestureRecognizers>
+                                        </Label>
+                                        <Image Source="daucong.png"
+                                            WidthRequest="20"
+                                            HeightRequest="20"
+                                            Aspect="AspectFit"
+                                            VerticalOptions="Center"
+                                            HorizontalOptions="Start"
+                                            TranslationY="-2"
+                                            Grid.Column="2"
+                                            TranslationX="4">
+                                            <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnDauCongDem3Tapped"/>
+                                        <PointerGestureRecognizer PointerEntered="OnDauCongDemPoint"
+                                                                PointerExited="OnDauCongDemPointer"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>
+                                    </HorizontalStackLayout>
+                            </Frame>
+                    </Grid>
+                </Frame>
+             </Grid>
 
             <Grid  Grid.Row="1" Grid.Column="3">
                 <Frame Padding="0" HasShadow="True" BorderColor="White" BackgroundColor="White" CornerRadius="10" HeightRequest="290" WidthRequest="255">
                     <Grid >
-                        <Image x:Name="imgLauTomYumSua" Source="lau_tomyumsua.png" Aspect="AspectFit" HeightRequest="240" WidthRequest="230" HorizontalOptions="Center" VerticalOptions="Start">
+                        <Image x:Name="imgDuiGaFillet" Source="duigafillet.png" Aspect="AspectFit" HeightRequest="240" WidthRequest="230" HorizontalOptions="Center" VerticalOptions="Start">
                         <Image.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="OnLauTomYumSuaTapped"/>
-                                <PointerGestureRecognizer PointerEntered="OnLauTomYumSuaPoint"
-                                                        PointerExited="OnLauTomYumSuaPointer"/>
+                                <TapGestureRecognizer Tapped="OnDuiGaFilletTapped"/>
+                                <PointerGestureRecognizer PointerEntered="OnDuiGaFilletPoint"
+                                                        PointerExited="OnDuiGaFilletPointer"/>
                             </Image.GestureRecognizers>
                         </Image>
                         <Frame TranslationY="110" Padding="0" HasShadow="True" BorderColor="White" BackgroundColor="White" CornerRadius="10" HeightRequest="50" WidthRequest="290" TranslationX="0">
@@ -360,11 +474,11 @@
                                                                 PointerExited="OnDauTruDemPointer"/>
                                             </Image.GestureRecognizers>
                                         </Image>
-                                            <Label x:Name="lblLauTomYumSua" Text="Lẩu Tom Yum Sữa" WidthRequest="210" TranslationX="5" FontFamily="BirthstoneRegular" FontAttributes="Bold" FontSize="30" TextColor="Black" HorizontalOptions="Center" VerticalOptions="End" Padding="5,2">
+                                            <Label x:Name="lblDuiGaFillet" Text="Đùi gà fillet" WidthRequest="210" TranslationX="27" FontFamily="BirthstoneRegular" FontAttributes="Bold" FontSize="30" TextColor="Black" HorizontalOptions="Center" VerticalOptions="End" Padding="5,2">
                                                 <Label.GestureRecognizers>
-                                                    <TapGestureRecognizer Tapped="OnLauTomYumSuaTapped"/>
-                                                    <PointerGestureRecognizer PointerEntered="OnLauTomYumSuaPoint"
-                                                                            PointerExited="OnLauTomYumSuaPointer"/>
+                                                    <TapGestureRecognizer Tapped="OnDuiGaFilletTapped"/>
+                                                    <PointerGestureRecognizer PointerEntered="OnDuiGaFilletPoint"
+                                                                            PointerExited="OnDuiGaFilletPointer"/>
                                                 </Label.GestureRecognizers>
                                             </Label>
                                        
@@ -391,5 +505,7 @@
 
             </Grid>
         </VerticalStackLayout>
+    </Grid>
+    </ScrollView>
     </Grid>
 </ContentPage>

@@ -1,0 +1,68 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:NhaHang.Converters"
+             xmlns:local="clr-namespace:NhaHang.Con"
+             x:Class="NhaHang.KhachHang"
+             Title="Thông tin khách hàng">
+            <ContentPage.Resources>
+    <ResourceDictionary>
+        <converters:NumberToCurrencyConverter x:Key="NumberToCurrencyConverter"/>
+    </ResourceDictionary>
+    <ResourceDictionary>
+        <local:SoLuongNhoHonBangChinConverter x:Key="SoLuongCheck" />
+    </ResourceDictionary>
+
+</ContentPage.Resources>
+
+<Grid>
+    <Image 
+            Source="background.png" 
+            Aspect="AspectFill"
+            Opacity="1"/>
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <!-- Tên khách hàng -->
+            <Frame CornerRadius="12" Padding="10" HasShadow="True" BackgroundColor="White">
+                <VerticalStackLayout>
+                    <Label Text="Tên khách hàng *" FontAttributes="Bold" FontSize="16" TextColor="Black"/>
+                    <Entry x:Name="txtTen" Placeholder="Nhập tên khách hàng" TextColor="Black" FontAttributes="Bold"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Ngày sinh -->
+            <Frame CornerRadius="12" Padding="10" HasShadow="True" BackgroundColor="White">
+                <VerticalStackLayout>
+                    <Label Text="Ngày tháng năm sinh" FontAttributes="Bold" FontSize="16" TextColor="Black"/>
+                    <DatePicker x:Name="dpNgaySinh" Format="dd/MM/yyyy" TextColor="Black"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Số điện thoại -->
+            <Frame CornerRadius="12" Padding="10" HasShadow="True" BackgroundColor="White">
+                <VerticalStackLayout>
+                    <Label Text="Số điện thoại" FontAttributes="Bold" FontSize="16" TextColor="Black"/>
+                    <Entry x:Name="txtSDT" Placeholder="Nhập số điện thoại" Keyboard="Telephone" TextColor="Black"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Số bàn -->
+            <Frame CornerRadius="12" Padding="10" HasShadow="True" BackgroundColor="White">
+                <VerticalStackLayout>
+                    <Label Text="Số bàn *" FontAttributes="Bold" FontSize="16" TextColor="Black"/>
+                    <Entry x:Name="txtSoBan" Placeholder="Nhập số bàn" Keyboard="Numeric" TextColor="Black"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Nút lưu -->
+            <Button Text=" Lưu thông tin" 
+                    BackgroundColor="#FF5733" 
+                    TextColor="Black" 
+                    FontAttributes="Bold"
+                    CornerRadius="20"
+                    HeightRequest="50"
+                    Clicked="OnLuuClicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</Grid>
+</ContentPage>

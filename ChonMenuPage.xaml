@@ -106,7 +106,7 @@
                     Source="haisan.png"
                     Aspect="AspectFit" >
                     <Image.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="OnLoGoTapped"/>
+                                <TapGestureRecognizer Tapped="OnMenuHaiSanTapped"/>
                                 <PointerGestureRecognizer PointerEntered="OnChonHaiSanPoint"
                                                         PointerExited="OnChonHaiSanPointer"/>
                             </Image.GestureRecognizers>

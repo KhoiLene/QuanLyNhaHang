@@ -7,10 +7,12 @@
 
     <TabBar>
         <ShellContent Title="Trang chủ" ContentTemplate="{DataTemplate local:HomePage}" />
-        <!-- <ShellContent Title="Chọn vé vào" ContentTemplate="{DataTemplate local:VeVaoPage}" /> -->
+        <ShellContent Title="Khách Hàng" ContentTemplate="{DataTemplate local:KhachHang}" />
         <ShellContent Title="Chọn Loại Menu" ContentTemplate="{DataTemplate local:ChonMenuPage}" />
         <ShellContent Title="Menu Lẩu" ContentTemplate="{DataTemplate local:MenuPage}" />
         <ShellContent Title="Menu Thịt" ContentTemplate="{DataTemplate local:MenuThitPage}" />
+        <ShellContent Title="Menu Hải Sản" ContentTemplate="{DataTemplate local:MenuHaiSanPage}" />
+        <ShellContent Title="Thanh Toán" ContentTemplate="{DataTemplate local:ThanhToanPage}" />
         <!-- <ShellContent Title="Chọn loại đồ ăn" ContentTemplate="{DataTemplate local:ChonLoaiDoAnPage}" /> -->
         <!-- <ShellContent Title="Đặt bàn" ContentTemplate="{DataTemplate local:BookingPage}" />
         <ShellContent Title="Khuyến mãi" ContentTemplate="{DataTemplate local:PromoPage}" />

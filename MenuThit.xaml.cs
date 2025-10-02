@@ -2,105 +2,140 @@ namespace NhaHang;
 using NhaHang.Services;
 public partial class MenuThitPage : ContentPage
 {
-	int DemLauNam = 1;
-	int DemLauNam1 = 1;
-	int DemLauTomYum = 1;
-	int DemLauXuyenTieu = 1;
-	int DemLauCuaDong = 1;
-	int DemLauTomYumSua = 1;
+	int DemLoiVaiBo = 1;
+	int DemBaChiBo = 1;
+	int DemBapBoUc = 1;
+	int DemGauBo = 1;
+	int DemNacDamHeo = 1;
+	int DemSuonHeo = 1;
+	int DemTimHeo = 1;
+	int DemDuiGaFillet = 1;
 
 	public MenuThitPage()
 	{
 		InitializeComponent();
-		lblLauNam.Text = "Lẩu Nấm: " + DemLauNam;
-		lblLauNam1.Text = "Lẩu Nấm 1: " + DemLauNam1;
-		lblLauTomYum.Text = "Lẩu TomYum: " + DemLauTomYum;
-		lblLauXuyenTieu.Text = "Lẩu Xuyên Tiêu: " + DemLauXuyenTieu;
-		lblLauCuaDong.Text = "Lẩu Cua Đồng: " + DemLauCuaDong;
-		lblLauTomYumSua.Text = "Lẩu TomYum Sữa: " + DemLauTomYumSua;
+		lblLoiVaiBo.Text = "Lõi vai bò: " + DemLoiVaiBo;
+		lblBaChiBo.Text = "Ba chỉ bò: " + DemBaChiBo;
+		lblBapBoUc.Text = "Bắp bò Úc: " + DemBapBoUc;
+		lblGauBo.Text = "Gầu bò: " + DemGauBo;
+		lblNacDamHeo.Text = "Nạc dăm heo: " + DemNacDamHeo;
+		lblSuonHeo.Text = "Sườn heo: " + DemSuonHeo;
+		lblTimHeo.Text = "Tim heo: " + DemTimHeo;
+		lblDuiGaFillet.Text = "Đùi gà fillet: " + DemDuiGaFillet;
 	}
 	private void OnDauCongDemTapped(object sender, EventArgs e)
 	{
-		DemLauNam++;
-		lblLauNam.Text = "Lẩu Nấm: " + DemLauNam;
+		DemLoiVaiBo++;
+		lblLoiVaiBo.Text = "Lõi vai bò: " + DemLoiVaiBo;
 
 	}
 	private void OnDauTruDemTapped(object sender, EventArgs e)
 	{
-		if (DemLauNam > 0)
+		if (DemLoiVaiBo > 0)
 		{
-			DemLauNam--;
-			lblLauNam.Text = "Lẩu Nấm: " + DemLauNam;
+			DemLoiVaiBo--;
+			lblLoiVaiBo.Text = "Lõi vai bò: " + DemLoiVaiBo;
 		}
 	}
 	private void OnDauCongDem1Tapped(object sender, EventArgs e)
 	{
-		DemLauNam1++;
-		lblLauNam1.Text = "Lẩu Nấm 1: " + DemLauNam1;
+		DemBaChiBo++;
+		lblBaChiBo.Text = "Ba chỉ bò: " + DemBaChiBo;
 
 	}
 	private void OnDauTruDem1Tapped(object sender, EventArgs e)
 	{
-		if (DemLauNam1 > 0)
+		if (DemBaChiBo > 0)
 		{
-			DemLauNam1--;
-			lblLauNam1.Text = "Lẩu Nấm 1: " + DemLauNam1;
+			DemBaChiBo--;
+			lblBaChiBo.Text = "Ba chỉ bò: " + DemBaChiBo;
 		}
 	}
 	private void OnDauCongDemYTapped(object sender, EventArgs e)
 	{
-		DemLauTomYum++;
-		lblLauTomYum.Text = "Lẩu Tom Yum: " + DemLauTomYum;
+		DemBapBoUc++;
+		lblBapBoUc.Text = "Bắp bò Úc: " + DemBapBoUc;
 
 	}
 	private void OnDauTruDemYTapped(object sender, EventArgs e)
 	{
-		if (DemLauTomYum > 0)
+		if (DemBapBoUc > 0)
 		{
-			DemLauTomYum--;
-			lblLauTomYum.Text = "Lẩu Tom Yum: " + DemLauTomYum;
+			DemBapBoUc--;
+			lblBapBoUc.Text = "Bắp bò Úc: " + DemBapBoUc;
 		}
 	}
 	private void OnDauCongDemxTapped(object sender, EventArgs e)
 	{
-		DemLauXuyenTieu++;
-		lblLauXuyenTieu.Text = "Lẩu Xuyên Tiêu: " + DemLauXuyenTieu;
+		DemGauBo++;
+		lblGauBo.Text = "Gầu bò: " + DemGauBo;
 
 	}
 	private void OnDauTruDemxTapped(object sender, EventArgs e)
 	{
-		if (DemLauXuyenTieu > 0)
+		if (DemGauBo > 0)
 		{
-			DemLauXuyenTieu--;
-			lblLauXuyenTieu.Text = "Lẩu Xuyên Tiêu: " + DemLauXuyenTieu;
+			DemGauBo--;
+			lblGauBo.Text = "Gầu bò: " + DemGauBo;
 		}
 	}
+
+	private void OnDauCongDem2Tapped(object sender, EventArgs e)
+	{
+		DemNacDamHeo++;
+		lblNacDamHeo.Text = "Nạc dăm heo: " + DemNacDamHeo;
+
+	}
+	private void OnDauTruDem2Tapped(object sender, EventArgs e)
+	{
+		if (DemNacDamHeo > 0)
+		{
+			DemNacDamHeo--;
+			lblNacDamHeo.Text = "Nạc dăm heo : " + DemNacDamHeo;
+		}
+	}
+
 	private void OnDauCongDemCTapped(object sender, EventArgs e)
 	{
-		DemLauCuaDong++;
-		lblLauCuaDong.Text = "Lẩu Cua Đồng: " + DemLauCuaDong;
+		DemSuonHeo++;
+		lblSuonHeo.Text = "Sườn heo: " + DemSuonHeo;
 
 	}
 	private void OnDauTruDemCTapped(object sender, EventArgs e)
 	{
-		if (DemLauCuaDong > 0)
+		if (DemSuonHeo > 0)
 		{
-			DemLauCuaDong--;
-			lblLauCuaDong.Text = "Lẩu Cua Đồng: " + DemLauCuaDong;
+			DemSuonHeo--;
+			lblSuonHeo.Text = "Sườn heo: " + DemSuonHeo;
+		}
+	}
+
+	private void OnDauCongDem3Tapped(object sender, EventArgs e)
+	{
+		DemTimHeo++;
+		lblTimHeo.Text = "Tim heo: " + DemTimHeo;
+
+	}
+	private void OnDauTruDem3Tapped(object sender, EventArgs e)
+	{
+		if (DemTimHeo > 0)
+		{
+			DemTimHeo--;
+			lblTimHeo.Text = "Tim heo: " + DemTimHeo;
 		}
 	}
 		private void OnDauCongDemYSTapped(object sender, EventArgs e)
 	{
-		DemLauTomYumSua++;
-		lblLauTomYumSua.Text = "Lẩu Tom Yum Sữa: " + DemLauTomYumSua;
+		DemDuiGaFillet++;
+		lblDuiGaFillet.Text = "Đùi gà fillet: " + DemDuiGaFillet;
 
 	}
 	private void OnDauTruDemYSTapped(object sender, EventArgs e)
 	{
-		if (DemLauTomYumSua > 0)
+		if (DemDuiGaFillet > 0)
 		{
-			DemLauTomYumSua--;
-			lblLauTomYumSua.Text = "Lẩu Tom Yum Sữa: " + DemLauTomYumSua;
+			DemDuiGaFillet--;
+			lblDuiGaFillet.Text = "Đùi gà fillet: " + DemDuiGaFillet;
 		}
 	}
 	private void OnDauTruDemPoint(object sender, PointerEventArgs e)
@@ -126,147 +161,199 @@ public partial class MenuThitPage : ContentPage
 		image.ScaleTo(1, 200); // trở về kích thước ban đầu
 	}
 
-	private void OnLauNamTapped(object sender, TappedEventArgs e)
+	private void OnLoiVaiBoTapped(object sender, TappedEventArgs e)
 	{
-		GioHang.Instance.AddItem("Lẩu Nấm", 200000, DemLauNam);
+		GioHang.Instance.AddItem("Lõi vai bò", 200000, DemLoiVaiBo);
 
-		var lauNam = GioHang.Instance.Items.First(i => i.Ten == "Lẩu Nấm");
+		var loiVaiBo = GioHang.Instance.Items.First(i => i.Ten == "Lõi vai bò");
 
-		DisplayAlert("Chọn món", $"Bạn đã chọn Lẩu Nấm - Tổng số lượng: {DemLauNam}", "OK");
+		DisplayAlert("Chọn món", $"Bạn đã chọn Lõi vai bò - Tổng số lượng: {DemLoiVaiBo}", "OK");
 
 		lblCartCount.Text = GioHang.Instance.Dem.ToString();
-		DemLauNam = 1;
-		lblLauNam.Text = $"Lẩu Nấm: {DemLauNam}";
+		DemLoiVaiBo = 1;
+		lblLoiVaiBo.Text = $"Lõi vai bò: {DemLoiVaiBo}";
 	}
 
-	private async void OnLauNamPoint(object sender, PointerEventArgs e)
+	private async void OnLoiVaiBoPoint(object sender, PointerEventArgs e)
 	{
-		await imgLauNam.ScaleTo(1.1, 200);      
-		await lblLauNam.ScaleTo(1.1, 200);      
+		await imgLoiVaiBo.ScaleTo(1.1, 200);      
+		await lblLoiVaiBo.ScaleTo(1.1, 200);      
 	}
 
-	private async void OnLauNamXPoint(object sender, PointerEventArgs e)
+	private async void OnLoiVaiBoPointer(object sender, PointerEventArgs e)
 	{
-		await imgLauNam1.ScaleTo(1.1, 200);      
-		await lblLauNam1.ScaleTo(1.1, 200);      
+		await imgLoiVaiBo.ScaleTo(1.1, 200);      
+		await lblLoiVaiBo.ScaleTo(1.1, 200);      
 	}
-	private void OnLauNamXTapped(object sender, TappedEventArgs e)
+	private void OnBaChiBoTapped(object sender, TappedEventArgs e)
 	{
-		GioHang.Instance.AddItem("Lẩu Nấm 1", 200000, DemLauNam1);
+		GioHang.Instance.AddItem("Ba Chỉ Bò", 200000, DemBaChiBo);
 
-		var lauNam = GioHang.Instance.Items.First(i => i.Ten == "Lẩu Nấm 1");
+		var baChiBo = GioHang.Instance.Items.First(i => i.Ten == "Ba Chỉ Bò");
 
-		DisplayAlert("Chọn món", $"Bạn đã chọn Lẩu Nấm 1 - Tổng số lượng: {DemLauNam1}", "OK");
+		DisplayAlert("Chọn món", $"Bạn đã chọn Ba Chỉ Bò - Tổng số lượng: {DemBaChiBo}", "OK");
 
 		lblCartCount.Text = GioHang.Instance.Dem.ToString();
-		DemLauNam1 = 1;
-		lblLauNam1.Text = $"Lẩu Nấm 1: {DemLauNam}";
+		DemBaChiBo = 1;
+		lblBaChiBo.Text = $"Ba Chỉ Bò: {DemBaChiBo}";
 	}
 
 
-	private async void OnLauNamXPointer(object sender, PointerEventArgs e)
+	private async void OnBaChiBoPoint(object sender, PointerEventArgs e)
 	{
-		await imgLauNam1.ScaleTo(1.0, 200);
-		await lblLauNam1.ScaleTo(1.0, 200);
+		await imgBaChiBo.ScaleTo(1.0, 200);
+		await lblBaChiBo.ScaleTo(1.0, 200);
 	}
-	private async void OnLauNamPointer(object sender, PointerEventArgs e)
+	private async void OnBaChiBoPointer(object sender, PointerEventArgs e)
 	{
-		await imgLauNam.ScaleTo(1.0, 200);
-		await lblLauNam.ScaleTo(1.0, 200);
+		await imgBaChiBo.ScaleTo(1.0, 200);
+		await lblBaChiBo.ScaleTo(1.0, 200);
 	}
-	private void OnLauTomYumTapped(object sender, TappedEventArgs e)
+	private void OnBapBoUcTapped(object sender, TappedEventArgs e)
 	{
-		GioHang.Instance.AddItem("Lẩu Tom Yum", 250000, DemLauTomYum);
+		GioHang.Instance.AddItem("Bắp bò Úc", 250000, DemBapBoUc);
 
-		var lauTomYum = GioHang.Instance.Items.First(i => i.Ten == "Lẩu Tom Yum");
+		var bapBoUc = GioHang.Instance.Items.First(i => i.Ten == "Bắp bò Úc");
 
-		DisplayAlert("Chọn món", $"Bạn đã chọn Lẩu Tom Yum - Tổng số lượng: {DemLauTomYum}", "OK");
+		DisplayAlert("Chọn món", $"Bạn đã chọn Bắp bò Úc - Tổng số lượng: {DemBapBoUc}", "OK");
 
 		lblCartCount.Text = GioHang.Instance.Dem.ToString();
-		DemLauTomYum = 1;
-		lblLauTomYum.Text = $"Lẩu Tom Yum: {1}";
+		DemBapBoUc = 1;
+		lblBapBoUc.Text = $"Bắp bò Úc: {DemBapBoUc}";
 	}
-	private async void OnLauTomYumPoint(object sender, PointerEventArgs e)
+	private async void OnBapBoUcPoint(object sender, PointerEventArgs e)
 	{
-		await imgLauTomYum.ScaleTo(1.1, 200);
-		await lblLauTomYum.ScaleTo(1.1, 200);
+		await imgBapBoUc.ScaleTo(1.1, 200);
+		await lblBapBoUc.ScaleTo(1.1, 200);
 	}
 
-	private async void OnLauTomYumPointer(object sender, PointerEventArgs e)
+	private async void OnBapBoUcPointer(object sender, PointerEventArgs e)
 	{
-		await imgLauTomYum.ScaleTo(1.0, 200);
-		await lblLauTomYum.ScaleTo(1.0, 200);
+		await imgBapBoUc.ScaleTo(1.0, 200);
+		await lblBapBoUc.ScaleTo(1.0, 200);
 	}
-	private void OnLauXuyenTieuTapped(object sender, TappedEventArgs e)
+	private void OnGauBoTapped(object sender, TappedEventArgs e)
 	{
-		GioHang.Instance.AddItem("Lẩu Xuyên Tiêu", 250000, DemLauXuyenTieu);
+		GioHang.Instance.AddItem("Gầu bò", 250000, DemGauBo);
 
-		var lauXuyenTieu = GioHang.Instance.Items.First(i => i.Ten == "Lẩu Xuyên Tiêu");
+		var gauBo = GioHang.Instance.Items.First(i => i.Ten == "Gầu bò");
 
-		DisplayAlert("Chọn món", $"Bạn đã chọn Lẩu Xuyên Tiêu - Tổng số lượng: {DemLauXuyenTieu}", "OK");
+		DisplayAlert("Chọn món", $"Bạn đã chọn Gầu bò - Tổng số lượng: {DemGauBo}", "OK");
 
 		lblCartCount.Text = GioHang.Instance.Dem.ToString();
-		DemLauXuyenTieu = 1;
-		lblLauXuyenTieu.Text = $"Lẩu Xuyên Tiêu: {1}";
+		DemGauBo = 1;
+		lblGauBo.Text = $"Gầu bò: {DemGauBo}";
 	}
 
-	private async void OnLauXuyenTieuPoint(object sender, PointerEventArgs e)
+	private async void OnGauBoPoint(object sender, PointerEventArgs e)
 	{
-		await imgLauXuyenTieu.ScaleTo(1.1, 200);
-		await lblLauXuyenTieu.ScaleTo(1.1, 200);
+		await imgGauBo.ScaleTo(1.1, 200);
+		await lblGauBo.ScaleTo(1.1, 200);
 	}
 
-	private async void OnLauXuyenTieuPointer(object sender, PointerEventArgs e)
+	private async void OnGauBoPointer(object sender, PointerEventArgs e)
 	{
-		await imgLauXuyenTieu.ScaleTo(1.0, 200);
-		await lblLauXuyenTieu.ScaleTo(1.0, 200);
+		await imgGauBo.ScaleTo(1.0, 200);
+		await lblGauBo.ScaleTo(1.0, 200);
 	}
-	private void OnLauCuaDongTapped(object sender, TappedEventArgs e)
+	private void OnNacDamHeoTapped(object sender, TappedEventArgs e)
 	{
-		GioHang.Instance.AddItem("Lẩu Cua Đồng", 250000, DemLauCuaDong);
+		GioHang.Instance.AddItem("Nạc dăm heo ", 250000, DemNacDamHeo);
 
-		var lauCuaDong = GioHang.Instance.Items.First(i => i.Ten == "Lẩu Cua Đồng");
+		var nacDamHeo = GioHang.Instance.Items.First(i => i.Ten == "Nạc dăm heo ");
 
-		DisplayAlert("Chọn món", $"Bạn đã chọn Lẩu Cua Đồng - Tổng số lượng: {DemLauCuaDong}", "OK");
+		DisplayAlert("Chọn món", $"Bạn đã chọn Nạc dăm heo  - Tổng số lượng: {DemNacDamHeo}", "OK");
 
 		lblCartCount.Text = GioHang.Instance.Dem.ToString();
-		DemLauCuaDong = 1;
-		lblLauCuaDong.Text = $"Lẩu Cua Đồng: {1}";
-	}
-	private async void OnLauCuaDongPoint(object sender, PointerEventArgs e)
-	{
-		await imgLauCuaDong.ScaleTo(1.1, 200);
-		await lblLauCuaDong.ScaleTo(1.1, 200);
+		DemNacDamHeo = 1;
+		lblNacDamHeo.Text = $"Nạc dăm heo : {DemNacDamHeo}";
 	}
 
-	private async void OnLauCuaDongPointer(object sender, PointerEventArgs e)
+	private async void OnNacDamHeoPoint(object sender, PointerEventArgs e)
 	{
-		await imgLauCuaDong.ScaleTo(1.0, 200);
-		await lblLauCuaDong.ScaleTo(1.0, 200);
+		await imgNacDamHeo.ScaleTo(1.1, 200);
+		await lblNacDamHeo.ScaleTo(1.1, 200);
 	}
-		private void OnLauTomYumSuaTapped(object sender, TappedEventArgs e)
+
+	private async void OnNacDamHeoPointer(object sender, PointerEventArgs e)
 	{
-		GioHang.Instance.AddItem("Lẩu Tom Yum Sữa", 250000, DemLauTomYumSua);
+		await imgNacDamHeo.ScaleTo(1.0, 200);
+		await lblNacDamHeo.ScaleTo(1.0, 200);
+	}
+	private void OnSuonHeoTapped(object sender, TappedEventArgs e)
+	{
+		GioHang.Instance.AddItem("Sườn heo", 250000, DemSuonHeo);
 
-		var lauTomYumSua = GioHang.Instance.Items.FirstOrDefault(i => i.Ten == "Lẩu Tom YumSua");
+		var suonHeo = GioHang.Instance.Items.First(i => i.Ten == "Sườn heo");
 
-		DisplayAlert("Chọn món", $"Bạn đã chọn Lẩu Tom Yum Sữa - Tổng số lượng: {DemLauTomYumSua}", "OK");
+		DisplayAlert("Chọn món", $"Bạn đã chọn Sườn heo - Tổng số lượng: {DemSuonHeo}", "OK");
 
 		lblCartCount.Text = GioHang.Instance.Dem.ToString();
-		DemLauTomYumSua = 1;
-		lblLauTomYumSua.Text = $"Lẩu Tom Yum Sữa: {1}";
+		DemSuonHeo = 1;
+		lblSuonHeo.Text = $"Sườn heo: {DemSuonHeo}";
 	}
-	private async void OnLauTomYumSuaPoint(object sender, PointerEventArgs e)
+	private async void OnSuonHeoPoint(object sender, PointerEventArgs e)
 	{
-		await imgLauTomYumSua.ScaleTo(1.1, 200);
-		await lblLauTomYumSua.ScaleTo(1.1, 200);
+		await imgSuonHeo.ScaleTo(1.1, 200);
+		await lblSuonHeo.ScaleTo(1.1, 200);
 	}
 
-private async void OnLauTomYumSuaPointer(object sender, PointerEventArgs e)
+	private async void OnSuonHeoPointer(object sender, PointerEventArgs e)
 	{
-		await imgLauTomYumSua.ScaleTo(1.0, 200);
-		await lblLauTomYumSua.ScaleTo(1.0, 200);
+		await imgSuonHeo.ScaleTo(1.0, 200);
+		await lblSuonHeo.ScaleTo(1.0, 200);
 	}
+
+	private void OnTimHeoTapped(object sender, TappedEventArgs e)
+	{
+		GioHang.Instance.AddItem("Tim heo", 250000, DemTimHeo);
+
+		var timHeo = GioHang.Instance.Items.First(i => i.Ten == "Tim heo");
+
+		DisplayAlert("Chọn món", $"Bạn đã chọn Tim heo - Tổng số lượng: {DemTimHeo}", "OK");
+
+		lblCartCount.Text = GioHang.Instance.Dem.ToString();
+		DemTimHeo = 1;
+		lblTimHeo.Text = $"Tim heo: {DemTimHeo}";
+	}
+	private async void OnTimHeoPoint(object sender, PointerEventArgs e)
+	{
+		await imgTimHeo.ScaleTo(1.1, 200);
+		await lblTimHeo.ScaleTo(1.1, 200);
+	}
+
+	private async void OnTimHeoPointer(object sender, PointerEventArgs e)
+	{
+		await imgTimHeo.ScaleTo(1.0, 200);
+		await lblTimHeo.ScaleTo(1.0, 200);
+	}
+
+
+		private void OnDuiGaFilletTapped(object sender, TappedEventArgs e)
+	{
+		GioHang.Instance.AddItem("Đùi gà Fillet", 250000, DemDuiGaFillet);
+
+		var duiGafillet = GioHang.Instance.Items.FirstOrDefault(i => i.Ten == "Đùi gà Fillet");
+
+		DisplayAlert("Chọn món", $"Bạn đã chọn Đùi gà Fillet - Tổng số lượng: {DemDuiGaFillet}", "OK");
+
+		lblCartCount.Text = GioHang.Instance.Dem.ToString();
+		DemDuiGaFillet = 1;
+		lblDuiGaFillet.Text = $"Đùi gà Fillet: {DemDuiGaFillet}";
+	}
+	private async void OnDuiGaFilletPoint(object sender, PointerEventArgs e)
+	{
+		await imgDuiGaFillet.ScaleTo(1.1, 200);
+		await lblDuiGaFillet.ScaleTo(1.1, 200);
+	}
+
+	private async void OnDuiGaFilletPointer(object sender, PointerEventArgs e)
+	{
+		await imgDuiGaFillet.ScaleTo(1.0, 200);
+		await lblDuiGaFillet.ScaleTo(1.0, 200);
+	}
+
+
 	private async void OnGioHangTapped(object sender, TappedEventArgs e)
 	{
 		// Mở trang giỏ hàng
