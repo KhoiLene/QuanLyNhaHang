@@ -121,7 +121,7 @@
                     FontAttributes="Bold"
                     FontSize="Medium" >
                     <Label.GestureRecognizers>
-        <TapGestureRecognizer Tapped="OnLoGoTapped" />
+        <TapGestureRecognizer Tapped="OnMenuHaiSanTapped" />
         <PointerGestureRecognizer PointerEntered="OnChonHaiSanPoint"
                                   PointerExited="OnChonHaiSanPointer" />
         </Label.GestureRecognizers>
@@ -142,7 +142,7 @@
                         Source="vienthalau.png"
                         Aspect="AspectFit" >
                             <Image.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="OnLoGoTapped"/>
+                                <TapGestureRecognizer Tapped="OnMenuVienTapped"/>
                                 <PointerGestureRecognizer PointerEntered="OnChonVienThaLauPoint"
                                                         PointerExited="OnChonVienThaLauPointer"/>
                             </Image.GestureRecognizers>
@@ -157,7 +157,7 @@
                         FontAttributes="Bold"
                         FontSize="Medium" >
                         <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OnLoGoTapped" />
+                            <TapGestureRecognizer Tapped="OnMenuVienTapped" />
                             <PointerGestureRecognizer PointerEntered="OnChonVienThaLauPoint"
                                                     PointerExited="OnChonVienThaLauPointer"/>
                             </Label.GestureRecognizers>
@@ -177,7 +177,7 @@
                         Source="namvarau.png"
                         Aspect="AspectFit" >
                             <Image.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="OnLoGoTapped"/>
+                                <TapGestureRecognizer Tapped="OnRauNamTapped"/>
                                 <PointerGestureRecognizer PointerEntered="OnChonNamVaRauPoint"
                                                         PointerExited="OnChonNamVaRauPointer"/>
                             </Image.GestureRecognizers>
@@ -192,7 +192,7 @@
                         FontAttributes="Bold"
                         FontSize="Medium" >
                         <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OnLoGoTapped" />
+                            <TapGestureRecognizer Tapped="OnRauNamTapped" />
                             <PointerGestureRecognizer PointerEntered="OnChonNamVaRauPoint"
                                                     PointerExited="OnChonNamVaRauPointer"/>
                             </Label.GestureRecognizers>
@@ -212,7 +212,7 @@
                         Source="nuocngot.png"
                         Aspect="AspectFit" >
                             <Image.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="OnLoGoTapped"/>
+                                <TapGestureRecognizer Tapped="OnNuocNgotTapped"/>
                                 <PointerGestureRecognizer PointerEntered="OnChonNuocNgotPoint"
                                                         PointerExited="OnChonNuocNgotPointer"/>
                             </Image.GestureRecognizers>
@@ -227,7 +227,7 @@
                         FontAttributes="Bold"
                         FontSize="Medium" >
                         <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OnLoGoTapped" />
+                            <TapGestureRecognizer Tapped="OnNuocNgotTapped" />
                             <PointerGestureRecognizer PointerEntered="OnChonNuocNgotPoint"
                                                     PointerExited="OnChonNuocNgotPointer"/>
                             </Label.GestureRecognizers>
@@ -249,7 +249,7 @@
                         Source="doankem.png"
                         Aspect="AspectFit" >
                             <Image.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="OnLoGoTapped"/>
+                                <TapGestureRecognizer Tapped="OnDoAnKemTapped"/>
                                 <PointerGestureRecognizer PointerEntered="OnChonDoAnKemPoint"
                                                         PointerExited="OnChonDoAnKemPointer"/>
                             </Image.GestureRecognizers>
@@ -264,7 +264,7 @@
                         FontAttributes="Bold"
                         FontSize="Medium" >
                         <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OnLoGoTapped" />
+                            <TapGestureRecognizer Tapped="OnDoAnKemTapped" />
                             <PointerGestureRecognizer PointerEntered="OnChonDoAnKemPoint"
                                                     PointerExited="OnChonDoAnKemPointer"/>
                             </Label.GestureRecognizers>
@@ -284,7 +284,7 @@
                         Source="nuocep.png"
                         Aspect="AspectFit" >
                             <Image.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="OnLoGoTapped"/>
+                                <TapGestureRecognizer Tapped="OnNuocTraiCayTapped"/>
                                 <PointerGestureRecognizer PointerEntered="OnChonNuocTraiCayPoint"
                                                         PointerExited="OnChonNuocTraiCayPointer"/>
                             </Image.GestureRecognizers>
@@ -299,7 +299,7 @@
                         FontAttributes="Bold"
                         FontSize="Medium" >
                         <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OnLoGoTapped" />
+                            <TapGestureRecognizer Tapped="OnNuocTraiCayTapped" />
                             <PointerGestureRecognizer PointerEntered="OnChonNuocTraiCayPoint"
                                                     PointerExited="OnChonNuocTraiCayPointer"/>
                             </Label.GestureRecognizers>
@@ -321,7 +321,7 @@
                         Source="nuocgao.png"
                         Aspect="AspectFit" >
                             <Image.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="OnLoGoTapped"/>
+                                <TapGestureRecognizer Tapped="OnNuocEpTapped"/>
                                 <PointerGestureRecognizer PointerEntered="OnChonNuocEpPoint"
                                                         PointerExited="OnChonNuocEpPointer"/>
                             </Image.GestureRecognizers>
@@ -336,13 +336,21 @@
                         FontAttributes="Bold"
                         FontSize="Medium" >
                         <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OnLoGoTapped" />
+                            <TapGestureRecognizer Tapped="OnNuocEpTapped" />
                             <PointerGestureRecognizer PointerEntered="OnChonNuocEpPoint"
                                                     PointerExited="OnChonNuocEpPointer"/>
                             </Label.GestureRecognizers>
                     </Label>
                 </Grid>
         </Frame>
+         <Button
+            x:Name="CounterBt"
+            Text="Thanh Toán"
+            Clicked="OnCounter1Clicked"
+            FontAttributes="Bold"
+            HorizontalOptions="Fill"
+            FontSize="18"
+            CornerRadius="20"/>
     </AbsoluteLayout>
     </Grid>
 </ContentPage>

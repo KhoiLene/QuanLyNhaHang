@@ -32,6 +32,30 @@ public partial class ChonMenuPage : ContentPage
     {
         await Navigation.PushAsync(new MenuHaiSanPage());
     }
+    private async void OnMenuVienTapped(object sender, TappedEventArgs e)
+    {
+        await Navigation.PushAsync(new HangVien());
+    }
+    private async void OnRauNamTapped(object sender, TappedEventArgs e)
+    {
+        await Navigation.PushAsync(new RauNam());
+    }
+    private async void OnNuocNgotTapped(object sender, TappedEventArgs e)
+    {
+        await Navigation.PushAsync(new NuocNgot());
+    }
+    private async void OnDoAnKemTapped(object sender, TappedEventArgs e)
+    {
+        await Navigation.PushAsync(new DoAnKem());
+    }
+    private async void OnNuocTraiCayTapped(object sender, TappedEventArgs e)
+    {
+        await Navigation.PushAsync(new NuocTraiCay());
+    }
+    private async void OnNuocEpTapped(object sender, TappedEventArgs e)
+    {
+        await Navigation.PushAsync(new NuocEp());
+    }
     private async void OnChonPoint(object sender, PointerEventArgs e)
     {
         await imgThitNhapKhau.ScaleTo(1.1, 200);
@@ -142,7 +166,7 @@ public partial class ChonMenuPage : ContentPage
     }
     private async void OnChonNuocTraiCayPoint(object sender, PointerEventArgs e)
     {
-        await imgNuocTraiCay.ScaleTo(1.1, 200); 
+        await imgNuocTraiCay.ScaleTo(1.1, 200);
 
         await lblNuocTraiCay.ScaleTo(1.1, 200);
     }
@@ -150,8 +174,12 @@ public partial class ChonMenuPage : ContentPage
 
     private async void OnChonNuocTraiCayPointer(object sender, PointerEventArgs e)
     {
-        await imgNuocTraiCay.ScaleTo(1.0, 200); 
+        await imgNuocTraiCay.ScaleTo(1.0, 200);
 
         await lblNuocTraiCay.ScaleTo(1.0, 200);
+    }
+    private void OnCounter1Clicked(object sender, EventArgs e)
+    {
+        Application.Current.MainPage = new NavigationPage(new GioHangPage());
     }
 }

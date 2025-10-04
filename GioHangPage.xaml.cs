@@ -1,6 +1,7 @@
 using NhaHang.Services;
 using GioHangTenModel = NhaHang.Services.GioHangTen;
 namespace NhaHang;
+using System.Text;
 
 
 public partial class GioHangPage : ContentPage
@@ -19,11 +20,16 @@ public partial class GioHangPage : ContentPage
         if (kh != null)
         {
             lblTen.Text = $"Tên: {kh.Tenk}";
+            lblGioiTinh.Text = $"Giới tính: {kh.GioiTinh}";
             lblNgaySinh.Text = $"Ngày sinh: {(kh.NgaySinh.HasValue ? kh.NgaySinh.Value.ToString("dd/MM/yyyy") : "Không nhập")}";
             lblSDT.Text = $"SĐT: {(kh.SDT > 0 ? kh.SDT.ToString() : "Không nhập")}";
             lblSoBan.Text = $"Số bàn: {kh.SoBan}";
             //string maHoaDon = $"HD-HCMUTE{new Random().Next(1, 9999)}";
             lblMaHoaDon.Text = $"Mã hóa đơn: {GioHang.Instance.MaHoaDon}";
+            lblSoNha.Text = $"Số nhà: {kh.SoNha}";
+            lblTenDuong.Text = $"Đường: {kh.TenDuong}";
+            lblQuan.Text = $"Quận/Huyện: {kh.Quan}";
+            lblThanhPho.Text = $"Thành phố: {kh.ThanhPho}";
             lblNgayXuat.Text = $"Ngày xuất hoá đơn: {GioHang.Instance.NgayXuat}";
 
         }
@@ -33,6 +39,10 @@ public partial class GioHangPage : ContentPage
             lblNgaySinh.Text = "Ngày sinh: Chưa có";
             lblSDT.Text = "SĐT: Chưa có";
             lblSoBan.Text = "Số bàn: Chưa có";
+            lblSoNha.Text = $"Số nhà: Chưa có";
+            lblTenDuong.Text = $"Đường: Chưa có";
+            lblQuan.Text = $"Quận/Huyện: Chưa có";
+            lblThanhPho.Text = $"Thành phố: Chưa có";
         }
 
     }
@@ -156,18 +166,24 @@ public partial class GioHangPage : ContentPage
                 if (!Directory.Exists(folder))
                     Directory.CreateDirectory(folder);
 
-                string fileName = Path.Combine(folder, $"Hoadon.txt");
+                // Ghi hóa đơn vào file riêng
+                string fileName = Path.Combine(folder, "HoaDon.txt");
                 File.WriteAllText(fileName, noiDung);
                 await DisplayAlert("Thông báo", $"Hóa đơn đã lưu tại:\n{fileName}", "OK");
+
+                // Ghi nối vào file tổng hợp
+
+
 
                 GioHang.Instance.Clear();
                 GioHang.Instance.ClearKhachHang();
                 await Navigation.PushAsync(new KhachHang());
             }
+            
         }
-         catch (Exception ex)
-    {
-        await DisplayAlert("Lỗi", ex.Message, "OK");
-    }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Lỗi", ex.Message, "OK");
+        }
     }
 }

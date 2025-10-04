@@ -24,6 +24,7 @@
             x:Name="CounterBtn"
             Text="BẮT ĐẦU CA LÀM"
             Clicked="OnCounterClicked"
+            FontAttributes="Bold"
             HorizontalOptions="Fill"
             FontSize="18"
             CornerRadius="20"/>

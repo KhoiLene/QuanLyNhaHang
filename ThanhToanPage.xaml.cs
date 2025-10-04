@@ -1,4 +1,5 @@
 namespace NhaHang;
+using System.Text;
 
 using NhaHang.Services;
 public partial class ThanhToanPage : ContentPage
@@ -13,8 +14,8 @@ public partial class ThanhToanPage : ContentPage
         int tongTien = GioHang.Instance.GetTotal();
 
         // Thông tin ngân hàng
-        string bankCode = "BIDV";            // Mã ngân hàng
-        string stk = "123456789";            // Số tài khoản
+        string bankCode = "MB";            // Mã ngân hàng BIDV
+        string stk = "345601012006";            // Số tài khoản 123456789
         string noiDung = $"{maHD}-{tenKH}";  // Nội dung CK
         // ✅ Tạo link VietQR
         string qrUrl = $"https://img.vietqr.io/image/{bankCode}-{stk}-compact2.png?amount={tongTien}&addInfo={Uri.EscapeDataString(noiDung)}";
@@ -27,34 +28,42 @@ public partial class ThanhToanPage : ContentPage
     }
         private async void OnThanhToanClicked(object sender, EventArgs e)
     {
-         try
-    {
-        var service = new HoaDonService();
-        string noiDung = service.TaoNoiDungHoaDon();
-
-        // Hiện review trước khi lưu
-        bool xacNhan = await DisplayAlert("Xuất hoá đơn", noiDung, "Lưu", "Hủy");
-
-        if (xacNhan)
+        try
         {
-            // Lưu file hóa đơn
-            string folder = @"D:\NhaHang";
-            if (!Directory.Exists(folder))
-                Directory.CreateDirectory(folder);
+            var service = new HoaDonService();
+            string noiDung = service.TaoNoiDungHoaDon();
 
-            string fileName = Path.Combine(folder, $"HoaDon.txt");
-            File.WriteAllText(fileName, noiDung);
+            // Hiện review trước khi lưu
+            bool xacNhan = await DisplayAlert("Xuất hoá đơn", noiDung, "Lưu", "Hủy");
 
-            await DisplayAlert("Thông báo", $"Hóa đơn đã lưu tại:\n{fileName}", "OK");
+            if (xacNhan)
+            {
+                // Lưu file hóa đơn
+                string folder = @"D:\NhaHang";
+                if (!Directory.Exists(folder))
+                    Directory.CreateDirectory(folder);
 
-            GioHang.Instance.Clear();
-        GioHang.Instance.ClearKhachHang();
+                // Ghi hóa đơn vào file riêng
+                string fileName = Path.Combine(folder, "HoaDon.txt");
+                File.WriteAllText(fileName, noiDung);
+                await DisplayAlert("Thông báo", $"Hóa đơn đã lưu tại:\n{fileName}", "OK");
+
+                // Ghi nối vào file tổng hợp
+                string tongFile = Path.Combine(folder, "HoaDon.txt");
+                decimal tongTienHoaDon = GioHang.Instance.GetTotal();
+
+
+
+
+                GioHang.Instance.Clear();
+                GioHang.Instance.ClearKhachHang();
+                await Navigation.PushAsync(new KhachHang());
+            }
+    }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Lỗi", ex.Message, "OK");
         }
-    }
-    catch (Exception ex)
-    {
-        await DisplayAlert("Lỗi", ex.Message, "OK");
-    }
         
         await Navigation.PushAsync(new KhachHang());
     }

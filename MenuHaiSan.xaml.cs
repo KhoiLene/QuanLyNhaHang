@@ -132,7 +132,7 @@ public partial class MenuHaiSanPage : ContentPage
 			lblMucNangNut.Text = "Mực nang nút: " + DemMucNangNut;
 		}
 	}
-		private void OnDauCongDemYSTapped(object sender, EventArgs e)
+	private void OnDauCongDemYSTapped(object sender, EventArgs e)
 	{
 		DemSuaTuoi++;
 		lblSuaTuoi.Text = "Sứa tươi: " + DemSuaTuoi;
@@ -190,7 +190,7 @@ public partial class MenuHaiSanPage : ContentPage
 			lblCaBasa.Text = "Cá Basa: " + DemCaBasa;
 		}
 	}
-		private void OnDauCongDem7Tapped(object sender, EventArgs e)
+	private void OnDauCongDem7Tapped(object sender, EventArgs e)
 	{
 		DemGheFaci++;
 		lblGheFaci.Text = "Ghẹ Faci: " + DemGheFaci;
@@ -215,7 +215,7 @@ public partial class MenuHaiSanPage : ContentPage
 		var image = sender as Image;
 		image.ScaleTo(1, 200); // trở về kích thước ban đầu
 	}
-		private void OnDauCongDemPoint(object sender, PointerEventArgs e)
+	private void OnDauCongDemPoint(object sender, PointerEventArgs e)
 	{
 		var image = sender as Image;
 		image.ScaleTo(1.1, 200); // phóng to 10% trong 200ms
@@ -229,7 +229,7 @@ public partial class MenuHaiSanPage : ContentPage
 
 	private void OnTomTheTuoiTapped(object sender, TappedEventArgs e)
 	{
-		GioHang.Instance.AddItem("Tôm thẻ tươi", 200000, DemTomTheTuoi);
+		GioHang.Instance.AddItem("Tôm thẻ tươi", 84900, DemTomTheTuoi);
 
 		var tomTheTuoi = GioHang.Instance.Items.First(i => i.Ten == "Tôm thẻ tươi");
 
@@ -242,18 +242,18 @@ public partial class MenuHaiSanPage : ContentPage
 
 	private async void OnTomTheTuoiPoint(object sender, PointerEventArgs e)
 	{
-		await imgTomTheTuoi.ScaleTo(1.1, 200);      
-		await lblTomTheTuoi.ScaleTo(1.1, 200);      
+		await imgTomTheTuoi.ScaleTo(1.1, 200);
+		await lblTomTheTuoi.ScaleTo(1.1, 200);
 	}
 
 	private async void OnTomTheTuoiPointer(object sender, PointerEventArgs e)
 	{
-		await imgTomTheTuoi.ScaleTo(1.1, 200);      
-		await lblTomTheTuoi.ScaleTo(1.1, 200);      
+		await imgTomTheTuoi.ScaleTo(1.0, 200);
+		await lblTomTheTuoi.ScaleTo(1.0, 200);
 	}
 	private void OnTomTichTapped(object sender, TappedEventArgs e)
 	{
-		GioHang.Instance.AddItem("Tôm tích", 200000, DemTomTich);
+		GioHang.Instance.AddItem("Tôm tích", 84900, DemTomTich);
 
 		var baChiBo = GioHang.Instance.Items.First(i => i.Ten == "Tôm tích");
 
@@ -267,8 +267,8 @@ public partial class MenuHaiSanPage : ContentPage
 
 	private async void OnTomTichPoint(object sender, PointerEventArgs e)
 	{
-		await imgTomTich.ScaleTo(1.0, 200);
-		await lblTomTich.ScaleTo(1.0, 200);
+		await imgTomTich.ScaleTo(1.1, 200);
+		await lblTomTich.ScaleTo(1.1, 200);
 	}
 	private async void OnTomTichPointer(object sender, PointerEventArgs e)
 	{
@@ -277,7 +277,7 @@ public partial class MenuHaiSanPage : ContentPage
 	}
 	private void OnBaoTuCaBasaTapped(object sender, TappedEventArgs e)
 	{
-		GioHang.Instance.AddItem("Bao tử cá Basa", 250000, DemBaoTuCaBasa);
+		GioHang.Instance.AddItem("Bao tử cá Basa", 84900, DemBaoTuCaBasa);
 
 		var BaoTuCaBasa = GioHang.Instance.Items.First(i => i.Ten == "Bao tử cá Basa");
 
@@ -300,7 +300,7 @@ public partial class MenuHaiSanPage : ContentPage
 	}
 	private void OnBachTuocBabyTapped(object sender, TappedEventArgs e)
 	{
-		GioHang.Instance.AddItem("Bạch Tuộc Baby", 250000, DemBachTuocBaby);
+		GioHang.Instance.AddItem("Bạch Tuộc Baby", 84900, DemBachTuocBaby);
 
 		var BachTuocBaby = GioHang.Instance.Items.First(i => i.Ten == "Bạch Tuộc Baby");
 
@@ -324,7 +324,7 @@ public partial class MenuHaiSanPage : ContentPage
 	}
 	private void OnNgheuTapped(object sender, TappedEventArgs e)
 	{
-		GioHang.Instance.AddItem("Nghêu ", 250000, DemNgheu);
+		GioHang.Instance.AddItem("Nghêu ", 84900, DemNgheu);
 
 		var Ngheu = GioHang.Instance.Items.First(i => i.Ten == "Nghêu ");
 
@@ -348,7 +348,7 @@ public partial class MenuHaiSanPage : ContentPage
 	}
 	private void OnMucOngTapped(object sender, TappedEventArgs e)
 	{
-		GioHang.Instance.AddItem("Mực ống", 250000, DemMucOng);
+		GioHang.Instance.AddItem("Mực ống", 84900, DemMucOng);
 
 		var MucOng = GioHang.Instance.Items.First(i => i.Ten == "Mực ống");
 
@@ -372,7 +372,7 @@ public partial class MenuHaiSanPage : ContentPage
 
 	private void OnMucNangNutTapped(object sender, TappedEventArgs e)
 	{
-		GioHang.Instance.AddItem("Mực nang nút", 250000, DemMucNangNut);
+		GioHang.Instance.AddItem("Mực nang nút", 84900, DemMucNangNut);
 
 		var MucNangNut = GioHang.Instance.Items.First(i => i.Ten == "Mực nang nút");
 
@@ -395,9 +395,9 @@ public partial class MenuHaiSanPage : ContentPage
 	}
 
 
-		private void OnSuaTuoiTapped(object sender, TappedEventArgs e)
+	private void OnSuaTuoiTapped(object sender, TappedEventArgs e)
 	{
-		GioHang.Instance.AddItem("Sứa tươi", 250000, DemSuaTuoi);
+		GioHang.Instance.AddItem("Sứa tươi", 84900, DemSuaTuoi);
 
 		var SuaTuoi = GioHang.Instance.Items.FirstOrDefault(i => i.Ten == "Sứa tươi");
 
@@ -419,9 +419,9 @@ public partial class MenuHaiSanPage : ContentPage
 		await lblSuaTuoi.ScaleTo(1.0, 200);
 	}
 
-		private void OnVayCaHoiTapped(object sender, TappedEventArgs e)
+	private void OnVayCaHoiTapped(object sender, TappedEventArgs e)
 	{
-		GioHang.Instance.AddItem("Vây cá Hồi ", 250000, DemVayCaHoi);
+		GioHang.Instance.AddItem("Vây cá Hồi ", 84900, DemVayCaHoi);
 
 		var VayCaHoi = GioHang.Instance.Items.First(i => i.Ten == "Vây cá Hồi ");
 
@@ -445,7 +445,7 @@ public partial class MenuHaiSanPage : ContentPage
 	}
 	private void OnCaSauFilletTapped(object sender, TappedEventArgs e)
 	{
-		GioHang.Instance.AddItem("Cá sấu fillet", 250000, DemCaSauFillet);
+		GioHang.Instance.AddItem("Cá sấu fillet", 84900, DemCaSauFillet);
 
 		var CaSauFillet = GioHang.Instance.Items.First(i => i.Ten == "Cá sấu fillet");
 
@@ -469,7 +469,7 @@ public partial class MenuHaiSanPage : ContentPage
 
 	private void OnCaBasaTapped(object sender, TappedEventArgs e)
 	{
-		GioHang.Instance.AddItem("Cá basa", 250000, DemCaBasa);
+		GioHang.Instance.AddItem("Cá basa", 84900, DemCaBasa);
 
 		var CaBasa = GioHang.Instance.Items.First(i => i.Ten == "Cá basa");
 
@@ -492,9 +492,9 @@ public partial class MenuHaiSanPage : ContentPage
 	}
 
 
-		private void OnGheFaciTapped(object sender, TappedEventArgs e)
+	private void OnGheFaciTapped(object sender, TappedEventArgs e)
 	{
-		GioHang.Instance.AddItem("Ghẹ Faci", 250000, DemGheFaci);
+		GioHang.Instance.AddItem("Ghẹ Faci", 84900, DemGheFaci);
 
 		var GheFaci = GioHang.Instance.Items.FirstOrDefault(i => i.Ten == "Ghẹ Faci");
 
@@ -526,7 +526,14 @@ public partial class MenuHaiSanPage : ContentPage
 		base.OnAppearing();
 		lblCartCount.Text = GioHang.Instance.Dem.ToString();
 	}
-
+	private void OnCounterClicked(object sender, EventArgs e)
+	{
+		Application.Current.MainPage = new NavigationPage(new ChonMenuPage());
+	}
+	private void OnCounter1Clicked(object sender, EventArgs e)
+    {
+        Application.Current.MainPage = new NavigationPage(new GioHangPage());
+    }
 
 
 

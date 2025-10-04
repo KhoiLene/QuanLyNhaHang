@@ -12,11 +12,13 @@
         <ShellContent Title="Menu Lẩu" ContentTemplate="{DataTemplate local:MenuPage}" />
         <ShellContent Title="Menu Thịt" ContentTemplate="{DataTemplate local:MenuThitPage}" />
         <ShellContent Title="Menu Hải Sản" ContentTemplate="{DataTemplate local:MenuHaiSanPage}" />
+        <ShellContent Title="Menu Viên" ContentTemplate="{DataTemplate local:HangVien}" />
+        <ShellContent Title="Menu Rau" ContentTemplate="{DataTemplate local:RauNam}" />   
+        <ShellContent Title="Menu Đồ Ăn Kèm" ContentTemplate="{DataTemplate local:DoAnKem}" />
+        <ShellContent Title="Menu Nước Trái Cây" ContentTemplate="{DataTemplate local:NuocTraiCay}" />  
+        <ShellContent Title="Menu Nước Ngọt" ContentTemplate="{DataTemplate local:NuocNgot}" />   
+        <ShellContent Title="Menu Nước Ép" ContentTemplate="{DataTemplate local:NuocEp}" />    
         <ShellContent Title="Thanh Toán" ContentTemplate="{DataTemplate local:ThanhToanPage}" />
-        <!-- <ShellContent Title="Chọn loại đồ ăn" ContentTemplate="{DataTemplate local:ChonLoaiDoAnPage}" /> -->
-        <!-- <ShellContent Title="Đặt bàn" ContentTemplate="{DataTemplate local:BookingPage}" />
-        <ShellContent Title="Khuyến mãi" ContentTemplate="{DataTemplate local:PromoPage}" />
-        <ShellContent Title="Thông tin" ContentTemplate="{DataTemplate local:InfoPage}" />  -->
         <ShellContent Title="Giỏ Hàng" ContentTemplate="{DataTemplate local:GioHangPage}" />
     </TabBar>
 

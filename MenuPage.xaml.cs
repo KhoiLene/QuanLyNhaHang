@@ -73,7 +73,7 @@ public partial class MenuPage : ContentPage
 			lblLauCuaDong.Text = "Lẩu Cua Đồng: " + DemLauCuaDong;
 		}
 	}
-		private void OnDauCongDemYSTapped(object sender, EventArgs e)
+	private void OnDauCongDemYSTapped(object sender, EventArgs e)
 	{
 		DemLauTomYumSua++;
 		lblLauTomYumSua.Text = "Lẩu Tom Yum Sữa: " + DemLauTomYumSua;
@@ -98,7 +98,7 @@ public partial class MenuPage : ContentPage
 		var image = sender as Image;
 		image.ScaleTo(1, 200); // trở về kích thước ban đầu
 	}
-		private void OnDauCongDemPoint(object sender, PointerEventArgs e)
+	private void OnDauCongDemPoint(object sender, PointerEventArgs e)
 	{
 		var image = sender as Image;
 		image.ScaleTo(1.1, 200); // phóng to 10% trong 200ms
@@ -112,7 +112,7 @@ public partial class MenuPage : ContentPage
 
 	private void OnLauNamTapped(object sender, TappedEventArgs e)
 	{
-		GioHang.Instance.AddItem("Lẩu Nấm", 200000, DemLauNam);
+		GioHang.Instance.AddItem("Lẩu Nấm", 50000, DemLauNam);
 
 		var lauNam = GioHang.Instance.Items.First(i => i.Ten == "Lẩu Nấm");
 
@@ -125,8 +125,8 @@ public partial class MenuPage : ContentPage
 
 	private async void OnLauNamPoint(object sender, PointerEventArgs e)
 	{
-		await imgLauNam.ScaleTo(1.1, 200);      
-		await lblLauNam.ScaleTo(1.1, 200);      
+		await imgLauNam.ScaleTo(1.1, 200);
+		await lblLauNam.ScaleTo(1.1, 200);
 	}
 
 
@@ -137,7 +137,7 @@ public partial class MenuPage : ContentPage
 	}
 	private void OnLauTomYumTapped(object sender, TappedEventArgs e)
 	{
-		GioHang.Instance.AddItem("Lẩu Tom Yum", 250000, DemLauTomYum);
+		GioHang.Instance.AddItem("Lẩu Tom Yum", 50000, DemLauTomYum);
 
 		var lauTomYum = GioHang.Instance.Items.First(i => i.Ten == "Lẩu Tom Yum");
 
@@ -160,7 +160,7 @@ public partial class MenuPage : ContentPage
 	}
 	private void OnLauXuyenTieuTapped(object sender, TappedEventArgs e)
 	{
-		GioHang.Instance.AddItem("Lẩu Xuyên Tiêu", 250000, DemLauXuyenTieu);
+		GioHang.Instance.AddItem("Lẩu Xuyên Tiêu", 50000, DemLauXuyenTieu);
 
 		var lauXuyenTieu = GioHang.Instance.Items.First(i => i.Ten == "Lẩu Xuyên Tiêu");
 
@@ -184,7 +184,7 @@ public partial class MenuPage : ContentPage
 	}
 	private void OnLauCuaDongTapped(object sender, TappedEventArgs e)
 	{
-		GioHang.Instance.AddItem("Lẩu Cua Đồng", 250000, DemLauCuaDong);
+		GioHang.Instance.AddItem("Lẩu Cua Đồng", 50000, DemLauCuaDong);
 
 		var lauCuaDong = GioHang.Instance.Items.First(i => i.Ten == "Lẩu Cua Đồng");
 
@@ -205,9 +205,9 @@ public partial class MenuPage : ContentPage
 		await imgLauCuaDong.ScaleTo(1.0, 200);
 		await lblLauCuaDong.ScaleTo(1.0, 200);
 	}
-		private void OnLauTomYumSuaTapped(object sender, TappedEventArgs e)
+	private void OnLauTomYumSuaTapped(object sender, TappedEventArgs e)
 	{
-		GioHang.Instance.AddItem("Lẩu Tom Yum Sữa", 250000, DemLauTomYumSua);
+		GioHang.Instance.AddItem("Lẩu Tom Yum Sữa", 50000, DemLauTomYumSua);
 
 		var lauTomYumSua = GioHang.Instance.Items.FirstOrDefault(i => i.Ten == "Lẩu Tom YumSua");
 
@@ -223,7 +223,7 @@ public partial class MenuPage : ContentPage
 		await lblLauTomYumSua.ScaleTo(1.1, 200);
 	}
 
-private async void OnLauTomYumSuaPointer(object sender, PointerEventArgs e)
+	private async void OnLauTomYumSuaPointer(object sender, PointerEventArgs e)
 	{
 		await imgLauTomYumSua.ScaleTo(1.0, 200);
 		await lblLauTomYumSua.ScaleTo(1.0, 200);
@@ -238,6 +238,14 @@ private async void OnLauTomYumSuaPointer(object sender, PointerEventArgs e)
 		base.OnAppearing();
 		lblCartCount.Text = GioHang.Instance.Dem.ToString();
 	}
+	private void OnCounterClicked(object sender, EventArgs e)
+	{
+		Application.Current.MainPage = new NavigationPage(new ChonMenuPage());
+	}
+	private void OnCounter1Clicked(object sender, EventArgs e)
+    {
+        Application.Current.MainPage = new NavigationPage(new GioHangPage());
+    }
 
 
 

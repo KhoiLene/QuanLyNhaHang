@@ -20,10 +20,15 @@ public class SoLuongNhoHonBangMotConverter : IValueConverter
 }
 public class GioHangTen
 {
-        public string Tenk { get; set; }
-        public DateTime? NgaySinh { get; set; }
-        public int SDT { get; set; }
-        public string SoBan { get; set; }
+    public string Tenk { get; set; }
+    public string GioiTinh { get; set; }
+    public DateTime? NgaySinh { get; set; }
+    public int SDT { get; set; }
+    public string SoBan { get; set; }
+    public string SoNha { get; set; }
+    public string TenDuong { get; set; }
+    public string Quan { get; set; }
+    public string ThanhPho { get; set; }
 }
 
 public class GioHangItem : INotifyPropertyChanged
@@ -59,7 +64,11 @@ public class GioHangItem : INotifyPropertyChanged
 public class GioHang
 {
 
-
+    public ObservableCollection<string> GioiTinhOptions { get; } = new()
+    {
+        "Nam",
+        "Nữ"
+    };
     private static GioHang _instance;
     public static GioHang Instance => _instance ??= new GioHang();
     public string MaHoaDon { get; private set; }
@@ -91,16 +100,23 @@ public class GioHang
     public ObservableCollection<GioHangTen> Ten { get; } = new();
     public int Dem => Items.Sum(i => i.SoLuong);
     public GioHangTen KhachHang { get; private set; }
-    public void AddTen(string tenk, DateTime? ngaySinh, int sdt, string soBan)
+    public void AddTen(string tenk, DateTime? ngaySinh, int sdt, string soBan,
+                   string soNha, string tenDuong, string quan, string thanhPho, string gioiTinh)
     {
         KhachHang = new GioHangTen
         {
             Tenk = tenk,
             NgaySinh = ngaySinh,
             SDT = sdt,
-            SoBan = soBan.ToString()
+            SoBan = soBan,
+            SoNha = soNha,
+            TenDuong = tenDuong,
+            Quan = quan,
+            ThanhPho = thanhPho,
+            GioiTinh = gioiTinh
         };
     }
+
 
 
     public void AddItem(string ten, int gia, int soLuong = 0)

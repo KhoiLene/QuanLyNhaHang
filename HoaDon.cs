@@ -40,7 +40,6 @@ namespace NhaHang.Services
         {
             string noiDung = TaoNoiDungHoaDon();
 
-            // Hiện review popup
             bool xacNhan = await Application.Current.MainPage.DisplayAlert(
                 "Xem trước hóa đơn",
                 noiDung,
@@ -54,8 +53,9 @@ namespace NhaHang.Services
                 if (!Directory.Exists(folder))
                     Directory.CreateDirectory(folder);
 
-                string fileName = Path.Combine(folder, "Hoadon.txt");
-                File.WriteAllText(fileName, noiDung);
+                string fileName = Path.Combine(folder, "HoaDon.txt");
+                decimal tongTienHoaDon = GioHang.Instance.GetTotal();
+
 
                 await Application.Current.MainPage.DisplayAlert("Thông báo", $"Hóa đơn đã lưu tại:\n{fileName}", "OK");
             }

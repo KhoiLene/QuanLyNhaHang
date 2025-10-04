@@ -36,11 +36,23 @@ build_metadata.AdditionalFiles.ManifestResourceName = NhaHang.ChonMenuPage.xaml
 build_metadata.AdditionalFiles.TargetPath = ChonMenuPage.xaml
 build_metadata.AdditionalFiles.RelativePath = ChonMenuPage.xaml
 
+[D:/NhaHang/NhaHang/DoAnKem.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NhaHang.DoAnKem.xaml
+build_metadata.AdditionalFiles.TargetPath = DoAnKem.xaml
+build_metadata.AdditionalFiles.RelativePath = DoAnKem.xaml
+
 [D:/NhaHang/NhaHang/GioHangPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = NhaHang.GioHangPage.xaml
 build_metadata.AdditionalFiles.TargetPath = GioHangPage.xaml
 build_metadata.AdditionalFiles.RelativePath = GioHangPage.xaml
+
+[D:/NhaHang/NhaHang/HangVien.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NhaHang.HangVien.xaml
+build_metadata.AdditionalFiles.TargetPath = HangVien.xaml
+build_metadata.AdditionalFiles.RelativePath = HangVien.xaml
 
 [D:/NhaHang/NhaHang/HomPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
@@ -77,6 +89,30 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = NhaHang.MenuThit.xaml
 build_metadata.AdditionalFiles.TargetPath = MenuThit.xaml
 build_metadata.AdditionalFiles.RelativePath = MenuThit.xaml
+
+[D:/NhaHang/NhaHang/NuocEp.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NhaHang.NuocEp.xaml
+build_metadata.AdditionalFiles.TargetPath = NuocEp.xaml
+build_metadata.AdditionalFiles.RelativePath = NuocEp.xaml
+
+[D:/NhaHang/NhaHang/NuocNgot.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NhaHang.NuocNgot.xaml
+build_metadata.AdditionalFiles.TargetPath = NuocNgot.xaml
+build_metadata.AdditionalFiles.RelativePath = NuocNgot.xaml
+
+[D:/NhaHang/NhaHang/NuocTraiCay.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NhaHang.NuocTraiCay.xaml
+build_metadata.AdditionalFiles.TargetPath = NuocTraiCay.xaml
+build_metadata.AdditionalFiles.RelativePath = NuocTraiCay.xaml
+
+[D:/NhaHang/NhaHang/RauNam.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NhaHang.RauNam.xaml
+build_metadata.AdditionalFiles.TargetPath = RauNam.xaml
+build_metadata.AdditionalFiles.RelativePath = RauNam.xaml
 
 [D:/NhaHang/NhaHang/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

@@ -36,11 +36,17 @@
             CornerRadius="20"/>
                     <Label Text="Thông tin khách hàng" FontAttributes="Bold" FontSize="18" TextColor="Black"/>
                     <Label x:Name="lblTen" FontAttributes="Bold" FontSize="18" TextColor="Black"/>
+                    <Label x:Name="lblGioiTinh" FontAttributes="Bold" FontSize="18" TextColor="Black"/>
                     <Label x:Name="lblNgaySinh" FontAttributes="Bold" FontSize="18" TextColor="Black"/>
                     <Label x:Name="lblSDT" FontAttributes="Bold" FontSize="18" TextColor="Black"/>
                     <Label x:Name="lblSoBan" FontAttributes="Bold" FontSize="18" TextColor="Black"/>
                     <Label Text="Mã hóa đơn" FontAttributes="Bold" FontSize="18" TextColor="Black"/>
                     <Label x:Name="lblMaHoaDon" FontSize="18" TextColor="Black"/>
+                    <Label Text="Địa chỉ" FontAttributes="Bold" FontSize="18" TextColor="Black"/>
+                    <Label x:Name="lblSoNha" FontAttributes="Bold" FontSize="18" TextColor="Black"/>
+                    <Label x:Name="lblTenDuong" FontAttributes="Bold" FontSize="18" TextColor="Black"/>
+                    <Label x:Name="lblQuan" FontAttributes="Bold" FontSize="18" TextColor="Black"/>
+                    <Label x:Name="lblThanhPho" FontAttributes="Bold" FontSize="18" TextColor="Black"/>
                     <Label Text="Ngày xuất hoá đơn" FontAttributes="Bold" FontSize="18" TextColor="Black"/>
                     <Label x:Name="lblNgayXuat" FontSize="18" TextColor="Black"/>
                 </VerticalStackLayout>
@@ -75,7 +81,7 @@
                     TextColor="Black"
                     WidthRequest="300"
                     HorizontalOptions="Center" />
-
+                    
                 <Label Text="Lựa chọn" 
                     FontAttributes="Bold" 
                     FontSize="18"
@@ -84,6 +90,7 @@
             </HorizontalStackLayout>
         </Frame>
     </Grid>
+    <Frame Padding="8" BackgroundColor="#eeeeee" CornerRadius="8" HasShadow="False">
         <CollectionView x:Name="cartList">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
@@ -136,8 +143,8 @@
                             </Frame>
                         </Grid>
                         <Label Text="{Binding ThanhTien, Converter={StaticResource NumberToCurrencyConverter}}" FontSize="18" TextColor="Black" WidthRequest="300" HorizontalOptions="Center" />
-                        <Grid WidthRequest="310">
-                        <Frame TranslationY="-20" Padding="0" HasShadow="True" BorderColor="White" BackgroundColor="White" CornerRadius="0" HeightRequest="47" WidthRequest="23" TranslationX="-100">
+                        <Grid WidthRequest="31">
+                           
                             <Image Source="thungrac.png"
                                 WidthRequest="60"
                                 HeightRequest="60"
@@ -145,26 +152,29 @@
                                 VerticalOptions="Center"
                                 HorizontalOptions="End"
                                 TranslationY="5"
-                                TranslationX="-19">
+                                TranslationX="45">
                                 <Image.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="OnDeleteItemTapped" />
                                     <PointerGestureRecognizer PointerEntered="OnThungRacPoint"
                                                                 PointerExited="OnThungRacPointer"/>
                                 </Image.GestureRecognizers>
                             </Image>
-                        </Frame>
                         </Grid>
+                        
                     </HorizontalStackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-
+</Frame>
+ <Frame Padding="8" BackgroundColor="#eeeeee" CornerRadius="8" HasShadow="True">
         <Label x:Name="totalLabel" FontAttributes="Bold" FontSize="20" TextColor="BLACK" HorizontalOptions="Fill"/>
+        </Frame>
 
-        <Button Text="Xóa giỏ hàng" FontSize="18" CornerRadius="20" Clicked="OnClearCartClicked"/>
+        <Button Text="Xóa giỏ hàng" FontSize="18" CornerRadius="20" Clicked="OnClearCartClicked" FontAttributes="Bold"/>
          <Button
             x:Name="Chonmon"
-            Text="Chọn món ăn tiếp theo"
+            Text="Thêm Món"
+            FontAttributes="Bold"
             Clicked="OnChonClicked"
             HorizontalOptions="Fill"
             FontSize="18"
@@ -172,6 +182,7 @@
         <Button
             x:Name="Hoadon"
             Text="Thanh Toán"
+            FontAttributes="Bold"
             Clicked="OnThanhToanClicked"
             HorizontalOptions="Fill"
             FontSize="18"

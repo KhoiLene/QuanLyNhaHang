@@ -124,7 +124,7 @@ public partial class MenuThitPage : ContentPage
 			lblTimHeo.Text = "Tim heo: " + DemTimHeo;
 		}
 	}
-		private void OnDauCongDemYSTapped(object sender, EventArgs e)
+	private void OnDauCongDemYSTapped(object sender, EventArgs e)
 	{
 		DemDuiGaFillet++;
 		lblDuiGaFillet.Text = "Đùi gà fillet: " + DemDuiGaFillet;
@@ -149,7 +149,7 @@ public partial class MenuThitPage : ContentPage
 		var image = sender as Image;
 		image.ScaleTo(1, 200); // trở về kích thước ban đầu
 	}
-		private void OnDauCongDemPoint(object sender, PointerEventArgs e)
+	private void OnDauCongDemPoint(object sender, PointerEventArgs e)
 	{
 		var image = sender as Image;
 		image.ScaleTo(1.1, 200); // phóng to 10% trong 200ms
@@ -163,7 +163,7 @@ public partial class MenuThitPage : ContentPage
 
 	private void OnLoiVaiBoTapped(object sender, TappedEventArgs e)
 	{
-		GioHang.Instance.AddItem("Lõi vai bò", 200000, DemLoiVaiBo);
+		GioHang.Instance.AddItem("Lõi vai bò", 55300, DemLoiVaiBo);
 
 		var loiVaiBo = GioHang.Instance.Items.First(i => i.Ten == "Lõi vai bò");
 
@@ -176,18 +176,18 @@ public partial class MenuThitPage : ContentPage
 
 	private async void OnLoiVaiBoPoint(object sender, PointerEventArgs e)
 	{
-		await imgLoiVaiBo.ScaleTo(1.1, 200);      
-		await lblLoiVaiBo.ScaleTo(1.1, 200);      
+		await imgLoiVaiBo.ScaleTo(1.1, 200);
+		await lblLoiVaiBo.ScaleTo(1.1, 200);
 	}
 
 	private async void OnLoiVaiBoPointer(object sender, PointerEventArgs e)
 	{
-		await imgLoiVaiBo.ScaleTo(1.1, 200);      
-		await lblLoiVaiBo.ScaleTo(1.1, 200);      
+		await imgLoiVaiBo.ScaleTo(1.0, 200);
+		await lblLoiVaiBo.ScaleTo(1.0, 200);
 	}
 	private void OnBaChiBoTapped(object sender, TappedEventArgs e)
 	{
-		GioHang.Instance.AddItem("Ba Chỉ Bò", 200000, DemBaChiBo);
+		GioHang.Instance.AddItem("Ba Chỉ Bò", 55300, DemBaChiBo);
 
 		var baChiBo = GioHang.Instance.Items.First(i => i.Ten == "Ba Chỉ Bò");
 
@@ -201,8 +201,8 @@ public partial class MenuThitPage : ContentPage
 
 	private async void OnBaChiBoPoint(object sender, PointerEventArgs e)
 	{
-		await imgBaChiBo.ScaleTo(1.0, 200);
-		await lblBaChiBo.ScaleTo(1.0, 200);
+		await imgBaChiBo.ScaleTo(1.1, 200);
+		await lblBaChiBo.ScaleTo(1.1, 200);
 	}
 	private async void OnBaChiBoPointer(object sender, PointerEventArgs e)
 	{
@@ -211,7 +211,7 @@ public partial class MenuThitPage : ContentPage
 	}
 	private void OnBapBoUcTapped(object sender, TappedEventArgs e)
 	{
-		GioHang.Instance.AddItem("Bắp bò Úc", 250000, DemBapBoUc);
+		GioHang.Instance.AddItem("Bắp bò Úc", 55300, DemBapBoUc);
 
 		var bapBoUc = GioHang.Instance.Items.First(i => i.Ten == "Bắp bò Úc");
 
@@ -234,7 +234,7 @@ public partial class MenuThitPage : ContentPage
 	}
 	private void OnGauBoTapped(object sender, TappedEventArgs e)
 	{
-		GioHang.Instance.AddItem("Gầu bò", 250000, DemGauBo);
+		GioHang.Instance.AddItem("Gầu bò", 55300, DemGauBo);
 
 		var gauBo = GioHang.Instance.Items.First(i => i.Ten == "Gầu bò");
 
@@ -258,7 +258,7 @@ public partial class MenuThitPage : ContentPage
 	}
 	private void OnNacDamHeoTapped(object sender, TappedEventArgs e)
 	{
-		GioHang.Instance.AddItem("Nạc dăm heo ", 250000, DemNacDamHeo);
+		GioHang.Instance.AddItem("Nạc dăm heo ", 55300, DemNacDamHeo);
 
 		var nacDamHeo = GioHang.Instance.Items.First(i => i.Ten == "Nạc dăm heo ");
 
@@ -282,7 +282,7 @@ public partial class MenuThitPage : ContentPage
 	}
 	private void OnSuonHeoTapped(object sender, TappedEventArgs e)
 	{
-		GioHang.Instance.AddItem("Sườn heo", 250000, DemSuonHeo);
+		GioHang.Instance.AddItem("Sườn heo", 55300, DemSuonHeo);
 
 		var suonHeo = GioHang.Instance.Items.First(i => i.Ten == "Sườn heo");
 
@@ -306,7 +306,7 @@ public partial class MenuThitPage : ContentPage
 
 	private void OnTimHeoTapped(object sender, TappedEventArgs e)
 	{
-		GioHang.Instance.AddItem("Tim heo", 250000, DemTimHeo);
+		GioHang.Instance.AddItem("Tim heo", 55300, DemTimHeo);
 
 		var timHeo = GioHang.Instance.Items.First(i => i.Ten == "Tim heo");
 
@@ -329,9 +329,9 @@ public partial class MenuThitPage : ContentPage
 	}
 
 
-		private void OnDuiGaFilletTapped(object sender, TappedEventArgs e)
+	private void OnDuiGaFilletTapped(object sender, TappedEventArgs e)
 	{
-		GioHang.Instance.AddItem("Đùi gà Fillet", 250000, DemDuiGaFillet);
+		GioHang.Instance.AddItem("Đùi gà Fillet", 55300, DemDuiGaFillet);
 
 		var duiGafillet = GioHang.Instance.Items.FirstOrDefault(i => i.Ten == "Đùi gà Fillet");
 
@@ -364,6 +364,14 @@ public partial class MenuThitPage : ContentPage
 		base.OnAppearing();
 		lblCartCount.Text = GioHang.Instance.Dem.ToString();
 	}
+	private void OnCounterClicked(object sender, EventArgs e)
+	{
+		Application.Current.MainPage = new NavigationPage(new ChonMenuPage());
+	}
+	private void OnCounter1Clicked(object sender, EventArgs e)
+    {
+        Application.Current.MainPage = new NavigationPage(new GioHangPage());
+    }
 
 
 

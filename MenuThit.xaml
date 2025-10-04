@@ -24,6 +24,15 @@
  <ScrollView>
     <Grid>
         <VerticalStackLayout  Padding="10" Spacing="20">
+            <Frame WidthRequest="300" HeightRequest="100" BackgroundColor="White" CornerRadius="50">
+                <Label Text=" Thịt nhập khẩu - giá 55,300 Chúc quý khách ngon miệng"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    FontSize="18"
+                    />
+            </Frame>
             <Grid>
                 <Image Source="giohang.png"
                     WidthRequest="100"
@@ -504,6 +513,22 @@
             </Grid>
 
             </Grid>
+            <Button
+            x:Name="CounterBtn"
+            Text="Thêm Món"
+            Clicked="OnCounterClicked"
+            FontAttributes="Bold"
+            HorizontalOptions="Fill"
+            FontSize="18"
+            CornerRadius="20"/>
+            <Button
+            x:Name="CounterBt"
+            Text="Thanh Toán"
+            Clicked="OnCounter1Clicked"
+            FontAttributes="Bold"
+            HorizontalOptions="Fill"
+            FontSize="18"
+            CornerRadius="20"/>
         </VerticalStackLayout>
     </Grid>
     </ScrollView>

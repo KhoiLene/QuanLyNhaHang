@@ -25,16 +25,27 @@
             <!-- Tên khách hàng -->
             <Frame CornerRadius="12" Padding="10" HasShadow="True" BackgroundColor="White">
                 <VerticalStackLayout>
-                    <Label Text="Tên khách hàng *" FontAttributes="Bold" FontSize="16" TextColor="Black"/>
+                    <Label Text="Tên khách hàng " FontAttributes="Bold" FontSize="16" TextColor="Black"/>
                     <Entry x:Name="txtTen" Placeholder="Nhập tên khách hàng" TextColor="Black" FontAttributes="Bold"/>
                 </VerticalStackLayout>
             </Frame>
+            <Frame CornerRadius="12" Padding="10" HasShadow="True" BackgroundColor="White">
+                <VerticalStackLayout>    
+        <Label Text="Giới Tính" FontAttributes="Bold" FontSize="16" TextColor="Black"/>            
+        <Picker 
+                x:Name="GioiTinhPicker"
+        ItemsSource="{Binding GioiTinhOptions}"
+        SelectedItem="{Binding SelectedGioiTinh}"
+        FontAttributes="Bold"
+        TextColor="Black" />
+        </VerticalStackLayout>
+        </Frame>
 
             <!-- Ngày sinh -->
             <Frame CornerRadius="12" Padding="10" HasShadow="True" BackgroundColor="White">
                 <VerticalStackLayout>
                     <Label Text="Ngày tháng năm sinh" FontAttributes="Bold" FontSize="16" TextColor="Black"/>
-                    <DatePicker x:Name="dpNgaySinh" Format="dd/MM/yyyy" TextColor="Black"/>
+                    <DatePicker x:Name="dpNgaySinh" Format="dd/MM/yyyy" TextColor="Black" FontAttributes="Bold"/>
                 </VerticalStackLayout>
             </Frame>
 
@@ -42,17 +53,30 @@
             <Frame CornerRadius="12" Padding="10" HasShadow="True" BackgroundColor="White">
                 <VerticalStackLayout>
                     <Label Text="Số điện thoại" FontAttributes="Bold" FontSize="16" TextColor="Black"/>
-                    <Entry x:Name="txtSDT" Placeholder="Nhập số điện thoại" Keyboard="Telephone" TextColor="Black"/>
+                    <Entry x:Name="txtSDT" Placeholder="Nhập số điện thoại" Keyboard="Telephone" TextColor="Black" FontAttributes="Bold"/>
                 </VerticalStackLayout>
             </Frame>
+        
 
             <!-- Số bàn -->
             <Frame CornerRadius="12" Padding="10" HasShadow="True" BackgroundColor="White">
                 <VerticalStackLayout>
-                    <Label Text="Số bàn *" FontAttributes="Bold" FontSize="16" TextColor="Black"/>
+                    <Label Text="Số bàn" FontAttributes="Bold" FontSize="16" TextColor="Black"/>
                     <Entry x:Name="txtSoBan" Placeholder="Nhập số bàn" Keyboard="Numeric" TextColor="Black"/>
                 </VerticalStackLayout>
             </Frame>
+            <!-- Địa chỉ -->
+            <Frame CornerRadius="12" Padding="10" HasShadow="True" BackgroundColor="White">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Địa chỉ" FontAttributes="Bold" FontSize="16" TextColor="Black" />
+                    
+                    <Entry x:Name="txtSoNha" Placeholder="Số nhà" TextColor="Black" FontAttributes="Bold"/>
+                    <Entry x:Name="txtTenDuong" Placeholder="Tên đường" TextColor="Black" FontAttributes="Bold"/>
+                    <Entry x:Name="txtQuan" Placeholder="Quận/Huyện" TextColor="Black" FontAttributes="Bold"/>
+                    <Entry x:Name="txtThanhPho" Placeholder="Thành phố" TextColor="Black" FontAttributes="Bold"/>
+                </VerticalStackLayout>
+            </Frame>
+
 
             <!-- Nút lưu -->
             <Button Text=" Lưu thông tin" 
